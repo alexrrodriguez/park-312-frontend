@@ -1,6 +1,6 @@
 <template>
   <div class="parks-index">
-    <h1>All Parks</h1>
+    <h1>Search for Parks:</h1>
     <div v-for="park in parks" v-bind:key="park.id">
       <p>
         {{ park.name }} | {{ park.district }} | {{ park.address }} | {{ park.facility }} | {{ park.hours }}

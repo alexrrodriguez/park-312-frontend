@@ -5,6 +5,8 @@
     <p>{{ park_event.date }}</p>
     <p>{{ park_event.time }}</p>
     <p>Attending: {{ park_event.attending }}</p>
+    <router-link v-bind:to="`/park_events/${park_event.id}/edit`">Edit Park Event</router-link>
+    |
     <router-link to="/park_events">Back to all Park Events</router-link>
   </div>
 </template>

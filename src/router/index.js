@@ -1,10 +1,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Park312 from "../views/Park312.vue";
+import ParkShow from "../views/ParkShow.vue";
 import ParkEventNew from "../views/ParkEventNew.vue";
 import ParkEventIndex from "../views/ParkEventIndex.vue";
 import ParkEventShow from "../views/ParkEventShow.vue";
-import ParkShow from "../views/ParkShow.vue";
+import ParkEventEdit from "../views/ParkEventEdit.vue";
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
@@ -31,6 +32,11 @@ const routes = [
     path: "/park_events/:id",
     name: "ParkEvent-show",
     component: ParkEventShow,
+  },
+  {
+    path: "/park_events/:id/edit",
+    name: "ParkEvent-edit",
+    component: ParkEventEdit,
   },
   {
     path: "/parks/:id",
