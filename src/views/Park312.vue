@@ -2,7 +2,10 @@
   <div class="parks-index">
     <h1>All Parks</h1>
     <div v-for="park in parks" v-bind:key="park.id">
-      <p>{{ park.name }}|{{ park.district }}|{{ park.address }}|{{ park.facility }}|{{ park.hours }}</p>
+      <p>
+        {{ park.name }} | {{ park.district }} | {{ park.address }} | {{ park.facility }} | {{ park.hours }}
+        <router-link v-bind:to="`/parks/${park.id}`">More Info</router-link>
+      </p>
     </div>
   </div>
 </template>

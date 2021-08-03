@@ -1,6 +1,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Park312 from "../views/Park312.vue";
+import ParkEventNew from "../views/ParkEventNew.vue";
+import ParkShow from "../views/ParkShow.vue";
+import Signup from "../views/Signup.vue";
+import Login from "../views/Login.vue";
+import Logout from "../views/Logout.vue";
 
 Vue.use(VueRouter);
 
@@ -10,6 +15,19 @@ const routes = [
     name: "Park312",
     component: Park312,
   },
+  {
+    path: "/park_event/new",
+    name: "ParkEvent-new",
+    component: ParkEventNew,
+  },
+  {
+    path: "/parks/:id",
+    name: "Park-show",
+    component: ParkShow,
+  },
+  { path: "/signup", name: "signup", component: Signup },
+  { path: "/login", name: "login", component: Login },
+  { path: "/logout", name: "logout", component: Logout },
   {
     path: "/about",
     name: "About",
