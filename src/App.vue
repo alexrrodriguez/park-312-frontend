@@ -5,13 +5,15 @@
       |
       <router-link to="/park_event/new">Create Park Event</router-link>
       |
+      <router-link to="/park_events">Your Park Events</router-link>
+      |
+      <router-link to="/about">About</router-link>
+      |
       <router-link to="/signup">Signup</router-link>
       |
       <router-link to="/login">Login</router-link>
       |
       <router-link to="/logout">Logout</router-link>
-      |
-      <router-link to="/about">About</router-link>
     </div>
     <router-view />
   </div>
