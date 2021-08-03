@@ -15,6 +15,7 @@
       <input type="text" v-model="newParkEventParams.time" />
       Attending:
       <input type="text" v-model="newParkEventParams.attending" />
+      |
       <input type="submit" value="Create" />
     </form>
   </div>

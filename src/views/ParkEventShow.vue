@@ -7,6 +7,8 @@
     <p>Attending: {{ park_event.attending }}</p>
     <router-link v-bind:to="`/park_events/${park_event.id}/edit`">Edit Park Event</router-link>
     |
+    <button v-on:click="destroyParkEvent(park_event)">Delete Park Event</button>
+    |
     <router-link to="/park_events">Back to all Park Events</router-link>
   </div>
 </template>
@@ -25,6 +27,13 @@ export default {
       this.park_event = response.data;
     });
   },
-  methods: {},
+  methods: {
+    destroyParkEvent: function (park_event) {
+      axios.delete("/park_events/" + park_event.id).then((response) => {
+        console.log("park event destroy", response);
+        this.$router.push("/park_events");
+      });
+    },
+  },
 };
 </script>
