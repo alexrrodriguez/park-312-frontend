@@ -5,8 +5,6 @@
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
-      Park ID:
-      <input type="text" v-model="park_event.park_id" />
       Facility:
       <input type="text" v-model="park_event.facility" />
       Date:

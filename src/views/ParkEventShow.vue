@@ -1,7 +1,8 @@
 <template>
   <div class="park-event-show">
-    <h2>Park ID: {{ park_event.park_id }}</h2>
-    <p>{{ park_event.facility }}</p>
+    <h1>{{ park_event.name }}</h1>
+    <h3>Park ID: {{ park_event.park_id }}</h3>
+    <h2>{{ park_event.facility }}</h2>
     <p>{{ park_event.date }}</p>
     <p>{{ park_event.time }}</p>
     <p>Attending: {{ park_event.attending }}</p>
