@@ -34,6 +34,44 @@
     </div>
 
     <h2>Search by park name, district, facility, or park id:</h2>
+    <div>
+      <ul>
+        <h3>Districts:</h3>
+        <li>Far North Side</li>
+        <li>Northwest Side</li>
+        <li>North Side</li>
+        <li>Central Chicago</li>
+        <li>West Side</li>
+        <li>Southwest Side</li>
+        <li>South Side</li>
+        <li>Far Southwest Side</li>
+        <li>Far Southeast Side</li>
+      </ul>
+      <ul>
+        <h3>Facilities:</h3>
+        <li>Baseball</li>
+        <li>Basketball</li>
+        <li>Beach</li>
+        <li>Boxing</li>
+        <li>Community Garden</li>
+        <li>Fitness Center</li>
+        <li>Football</li>
+        <li>Gymnasium</li>
+        <li>Handball</li>
+        <li>Horseshoe</li>
+        <li>Iceskating</li>
+        <li>Playground</li>
+        <li>Pool</li>
+        <li>Roller Court</li>
+        <li>Soccer</li>
+        <li>Softball</li>
+        <li>Tennis</li>
+        <li>Track</li>
+        <li>Turf Field</li>
+        <li>Volleyball</li>
+      </ul>
+    </div>
+    <h2>Search:</h2>
     <input type="text" v-model="search" placeholder="search..." />
     <div v-for="park in filterBy(parks, search, 'name', 'district', 'facility', 'id')" v-bind:key="park.id">
       <p>

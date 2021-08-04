@@ -39,7 +39,7 @@ export default {
         .post("/park_events", this.newParkEventParams)
         .then((response) => {
           console.log("park event create", response);
-          this.$router.push("/");
+          this.$router.push("/park_events");
         })
         .catch((error) => {
           console.log("park event create error", error.response);
