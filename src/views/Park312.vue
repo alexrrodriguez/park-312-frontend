@@ -1,7 +1,8 @@
 <template>
   <div class="parks-index">
     <h1>Search for Parks:</h1>
-    <div v-for="park in parks" v-bind:key="park.id">
+    <input type="text" v-model="search" placeholder="search district or facility.." />
+    <div v-for="park in filterBy(parks, search, 'district', 'facility')" v-bind:key="park.id">
       <p>
         {{ park.name }} | {{ park.district }} | {{ park.address }} | {{ park.facility }} | {{ park.hours }}
         <router-link v-bind:to="`/parks/${park.id}`">More Info</router-link>
@@ -11,13 +12,20 @@
 </template>
 
 <script>
+import Vue from "vue";
+import Vue2Filters from "vue2-filters";
+
+Vue.use(Vue2Filters);
+
 import axios from "axios";
 export default {
   data: function () {
     return {
       parks: [],
+      search: "",
     };
   },
+  mixins: [Vue2Filters.mixin],
   created: function () {
     this.indexParks();
   },
