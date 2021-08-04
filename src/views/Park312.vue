@@ -1,9 +1,9 @@
 <template>
   <div class="parks-index">
-    <h1>Search For Parks In Chicago!</h1>
+    <h1>PARK 312</h1>
+    <h1>Search For Parks And Create Park Events In Chicago!</h1>
     <div class="info">
-      <!-- <img class="map" src="Chicago_neighborhoods_map.png" alt="" /> -->
-      <div>
+      <div class="element">
         <p style="margin-bottom: 3px">
           <a
             href="https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y"
@@ -14,9 +14,9 @@
           </a>
         </p>
         <iframe
-          width="600px"
+          width="700px"
           title="Parks - Chicago Park District Facilities (current)"
-          height="400px"
+          height="500px"
           src="https://data.cityofchicago.org/w/5yyk-qt9y/3q3f-6823?cur=pBqSF35NdLs&from=root"
           frameborder="0"
           scrolling="no"
@@ -31,48 +31,41 @@
         </iframe>
         <p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p>
       </div>
+      <div>
+        DISTRICTS:
+        <img class="map element" src="../assets/Chicago_neighborhoods_map.png" alt="" />
+      </div>
     </div>
 
-    <h2>Search by park name, district, facility, or park id:</h2>
-    <div>
-      <ul>
-        <h3>Districts:</h3>
-        <li>Far North Side</li>
-        <li>Northwest Side</li>
-        <li>North Side</li>
-        <li>Central Chicago</li>
-        <li>West Side</li>
-        <li>Southwest Side</li>
-        <li>South Side</li>
-        <li>Far Southwest Side</li>
-        <li>Far Southeast Side</li>
-      </ul>
-      <ul>
-        <h3>Facilities:</h3>
-        <li>Baseball</li>
-        <li>Basketball</li>
-        <li>Beach</li>
-        <li>Boxing</li>
-        <li>Community Garden</li>
-        <li>Fitness Center</li>
-        <li>Football</li>
-        <li>Gymnasium</li>
-        <li>Handball</li>
-        <li>Horseshoe</li>
-        <li>Iceskating</li>
-        <li>Playground</li>
-        <li>Pool</li>
-        <li>Roller Court</li>
-        <li>Soccer</li>
-        <li>Softball</li>
-        <li>Tennis</li>
-        <li>Track</li>
-        <li>Turf Field</li>
-        <li>Volleyball</li>
-      </ul>
-    </div>
-    <h2>Search:</h2>
-    <input type="text" v-model="search" placeholder="search..." />
+    <h2>Search by Park Name, District, Facility, or Park ID:</h2>
+    Search:
+    <input type="text" v-model="search" placeholder="search name, district, facility" />
+    <table>
+      <thead>
+        <tr>
+          <th>Park Name</th>
+          <th>Park ID</th>
+          <th>District</th>
+          <th>Facility</th>
+          <th>Address</th>
+          <th>Hours</th>
+          <th>More Info</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr v-for="park in filterBy(parks, search, 'name', 'district', 'facility', 'id')" v-bind:key="park.id">
+          <td>{{ park.name }}</td>
+          <td>{{ park.id }}</td>
+          <td>{{ park.district }}</td>
+          <td>{{ park.facility }}</td>
+          <td>{{ park.address }}</td>
+          <td>{{ park.hours }}</td>
+          <td><router-link v-bind:to="`/parks/${park.id}`">Info</router-link></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <input type="text" v-model="search" placeholder="search..." />
     <div v-for="park in filterBy(parks, search, 'name', 'district', 'facility', 'id')" v-bind:key="park.id">
       <p>
         PARK NAME: {{ park.name }} | PARK ID: {{ park.id }} | DISTRICT: {{ park.district }} | FACILITY:
@@ -82,14 +75,32 @@
         ADDRESS: {{ park.address }} | HOURS: {{ park.hours }}
         <router-link v-bind:to="`/parks/${park.id}`">More Info</router-link>
       </p>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <style>
 .map {
-  width: 200px;
-  height: 200px;
+  width: auto;
+  height: 520px;
+}
+table {
+  overflow-y: scroll;
+  height: 350px;
+  display: block;
+  border: 1px solid;
+  margin-top: 50px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+th {
+  background: white;
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+}
+.info {
+  display: flex;
 }
 </style>
 
