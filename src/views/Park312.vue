@@ -65,17 +65,6 @@
         </tr>
       </tbody>
     </table>
-    <!-- <input type="text" v-model="search" placeholder="search..." />
-    <div v-for="park in filterBy(parks, search, 'name', 'district', 'facility', 'id')" v-bind:key="park.id">
-      <p>
-        PARK NAME: {{ park.name }} | PARK ID: {{ park.id }} | DISTRICT: {{ park.district }} | FACILITY:
-        {{ park.facility }} |
-      </p>
-      <p>
-        ADDRESS: {{ park.address }} | HOURS: {{ park.hours }}
-        <router-link v-bind:to="`/parks/${park.id}`">More Info</router-link>
-      </p>
-    </div> -->
   </div>
 </template>
 

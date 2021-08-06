@@ -1,25 +1,7 @@
 <template>
   <div class="park-event-new">
     <h1>Create New Park Event!</h1>
-    <form v-on:submit.prevent="createParkEvent()">
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      Park Name:
-      <input type="text" v-model="newParkEventParams.name" />
-      Park ID:
-      <input type="text" v-model="newParkEventParams.park_id" />
-      Facility:
-      <input type="text" v-model="newParkEventParams.facility" />
-      Date:
-      <input type="text" v-model="newParkEventParams.date" />
-      Time:
-      <input type="text" v-model="newParkEventParams.time" />
-      Attending:
-      <input type="text" v-model="newParkEventParams.attending" />
-      |
-      <input type="submit" value="Create" />
-    </form>
+    <hr />
     <div class="info">
       <div class="element">
         <p style="margin-bottom: 3px">
@@ -54,6 +36,43 @@
         <img class="map element" src="../assets/Chicago_neighborhoods_map.png" alt="" />
       </div>
     </div>
+    <hr />
+    <h1>Add A New Park Event To Your Schedule!</h1>
+    <form v-on:submit.prevent="createParkEvent()">
+      <ul>
+        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+      </ul>
+      <ul>
+        <li>
+          Park Name:
+          <input type="text" v-model="newParkEventParams.name" />
+        </li>
+        <li>
+          Park ID:
+          <input type="text" v-model="newParkEventParams.park_id" />
+        </li>
+        <li>
+          Facility:
+          <input type="text" v-model="newParkEventParams.facility" />
+        </li>
+        <li>
+          Date:
+          <input type="text" v-model="newParkEventParams.date" />
+        </li>
+        <li>
+          Time:
+          <input type="text" v-model="newParkEventParams.time" />
+        </li>
+        <li>
+          Attending:
+          <input type="text" v-model="newParkEventParams.attending" />
+        </li>
+        <li>
+          <input type="submit" value="Create" />
+        </li>
+      </ul>
+    </form>
+    <hr />
     <h2>Search by Park Name, District, Facility, or Park ID:</h2>
     Search:
     <input type="text" v-model="search" placeholder="search name, district, facility" />

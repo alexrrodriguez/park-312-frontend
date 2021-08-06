@@ -3,6 +3,8 @@
     <div id="nav">
       <router-link to="/">Park312</router-link>
       |
+      <router-link to="/park_search">Park Search</router-link>
+      |
       <router-link to="/park_event/new">Create Park Event</router-link>
       |
       <router-link to="/park_events">Your Park Events</router-link>

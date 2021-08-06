@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Park312 from "../views/Park312.vue";
+import ParkSearch from "../views/ParkSearch.vue";
 import ParkShow from "../views/ParkShow.vue";
 import ParkEventNew from "../views/ParkEventNew.vue";
 import ParkEventIndex from "../views/ParkEventIndex.vue";
@@ -17,6 +18,11 @@ const routes = [
     path: "/",
     name: "Park312",
     component: Park312,
+  },
+  {
+    path: "/park_search",
+    name: "ParkSearch",
+    component: ParkSearch,
   },
   {
     path: "/park_event/new",
