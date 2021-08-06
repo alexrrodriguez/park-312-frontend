@@ -76,7 +76,7 @@
         </tr>
       </tbody>
     </table>
-
+    <hr />
     <div class="info">
       <div class="element">
         <p style="margin-bottom: 3px">
@@ -106,28 +106,17 @@
         </iframe>
         <p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p>
       </div>
-      <div>
+      <div class="imagecontainer">
         DISTRICTS:
         <img class="map element" src="../assets/Chicago_neighborhoods_map.png" alt="" />
       </div>
     </div>
-    <!-- <div class="list-item" v-for="park in searchResult" :key="park.id">
-      <div class="card">
-        <h3>Name: {{ park.name }}</h3>
-        <p>District: {{ park.district }}</p>
-        <p>Facility: {{ park.facility }}</p>
-        <p>Address: {{ park.address }}</p>
-        <p>Hours: {{ park.hours }}</p>
-        <p>Indoor: {{ park.indoor }}</p>
-        <p>Outdoor: {{ park.outdoor }}</p>
-      </div>
-    </div> -->
   </div>
 </template>
 
 <style>
 .map {
-  width: auto;
+  max-width: 100%;
   height: 520px;
 }
 table {
@@ -147,6 +136,7 @@ th {
 }
 .info {
   display: flex;
+  max-width: 100%;
 }
 </style>
 
