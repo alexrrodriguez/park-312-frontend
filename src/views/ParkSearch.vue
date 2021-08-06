@@ -1,8 +1,9 @@
 <template>
   <div class="parks-index">
-    <h1>Search For Parks And Create Park Events In Chicago!</h1>
+    <h1>Filter Search For Parks By District, Facility, Indoor/Outdoor!</h1>
     Search District:
     <select v-model="selectedDistrict">
+      <option value="">--Select a District--</option>
       <option value="FAR NORTH SIDE">FAR NORTH SIDE</option>
       <option value="NORTHWEST SIDE">NORTHWEST SIDE</option>
       <option value="NORTH SIDE">NORTH SIDE</option>
@@ -15,6 +16,7 @@
     </select>
     Search Facility:
     <select v-model="selectedFacility">
+      <option value="">--Select a Facility--</option>
       <option value="BASEBALL">BASEBALL</option>
       <option value="BASKETBALL">BASKETBALL</option>
       <option value="BEACH">BEACH</option>
@@ -36,7 +38,15 @@
       <option value="TURF FIELD">TURF FIELD</option>
       <option value="VOLLEYBALL">VOLLEYBALL</option>
     </select>
-    <button @click="search">Search</button>
+    Indoor/Outdoor:
+    <select>
+      <option value="">--Select Indoor/Outdoor--</option>
+      <option value="YES">INDOOR</option>
+      <option value="YES">OUTDOOR</option>
+    </select>
+    <div>
+      <button @click="search">Search</button>
+    </div>
     <table>
       <thead>
         <tr>
@@ -122,7 +132,7 @@
 }
 table {
   overflow-y: scroll;
-  height: 350px;
+  height: 400px;
   display: block;
   border: 1px solid;
   margin-top: 50px;
@@ -149,6 +159,7 @@ export default {
       parks: [],
       selectedDistrict: "",
       selectedFacility: "",
+      selectedInOut: "",
       searchResult: [],
     };
   },

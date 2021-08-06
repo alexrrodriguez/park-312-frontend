@@ -73,7 +73,7 @@
       </ul>
     </form>
     <hr />
-    <h2>Search by Park Name, District, Facility, or Park ID:</h2>
+    <h2>Search by Park Name, District, or Facility:</h2>
     Search:
     <input type="text" v-model="search" placeholder="search name, district, facility" />
     <table>

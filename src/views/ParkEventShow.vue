@@ -10,7 +10,7 @@
     |
     <button v-on:click="destroyParkEvent(park_event)">Delete Park Event</button>
     |
-    <router-link to="/park_events">Back to all Park Events</router-link>
+    <router-link to="/park_events">Back to All Park Events</router-link>
   </div>
 </template>
 

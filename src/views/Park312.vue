@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <h2>Search by Park Name, District, Facility, or Park ID:</h2>
+    <h2>Search by Park Name, District, or Facility:</h2>
     Search:
     <input type="text" v-model="search" placeholder="search name, district, facility" />
     <table>
@@ -54,7 +54,7 @@
       </thead>
 
       <tbody>
-        <tr v-for="park in filterBy(parks, search, 'name', 'district', 'facility', 'id')" v-bind:key="park.id">
+        <tr v-for="park in filterBy(parks, search, 'name', 'district', 'facility')" v-bind:key="park.id">
           <td>{{ park.name }}</td>
           <td>{{ park.id }}</td>
           <td>{{ park.district }}</td>
