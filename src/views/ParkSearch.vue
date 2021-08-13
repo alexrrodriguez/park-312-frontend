@@ -51,7 +51,6 @@
       <thead>
         <tr>
           <th>Park Name</th>
-          <th>Park ID</th>
           <th>District</th>
           <th>Facility</th>
           <th>Address</th>
@@ -65,7 +64,6 @@
       <tbody>
         <tr v-for="park in searchResult" :key="park.id">
           <td>Name: {{ park.name }}</td>
-          <td>Park ID: {{ park.id }}</td>
           <td>District: {{ park.district }}</td>
           <td>Facility: {{ park.facility }}</td>
           <td>Address: {{ park.address }}</td>
@@ -121,7 +119,7 @@
 }
 table {
   overflow-y: scroll;
-  height: 400px;
+  height: 300px;
   display: block;
   border: 1px solid;
   margin-top: 50px;

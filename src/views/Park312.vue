@@ -3,35 +3,6 @@
     <h1>PARK 312</h1>
     <h1>Search For Parks And Create Park Events In Chicago!</h1>
     <hr />
-    <h2>Search by Park Name, District, or Facility:</h2>
-    Search:
-    <input type="text" v-model="search" placeholder="search name, district, facility" />
-    <table>
-      <thead>
-        <tr>
-          <th>Park Name</th>
-          <th>Park ID</th>
-          <th>District</th>
-          <th>Facility</th>
-          <th>Address</th>
-          <th>Hours</th>
-          <th>More Info</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr v-for="park in filterBy(parks, search, 'name', 'district', 'facility')" v-bind:key="park.id">
-          <td>{{ park.name }}</td>
-          <td>{{ park.id }}</td>
-          <td>{{ park.district }}</td>
-          <td>{{ park.facility }}</td>
-          <td>{{ park.address }}</td>
-          <td>{{ park.hours }}</td>
-          <td><router-link v-bind:to="`/parks/${park.id}`">Info</router-link></td>
-        </tr>
-      </tbody>
-    </table>
-    <hr />
     <div class="info">
       <div class="element">
         <p style="margin-bottom: 3px">
@@ -66,6 +37,36 @@
         <img class="map element" src="../assets/Chicago_neighborhoods_map.png" alt="" />
       </div>
     </div>
+    <h2>Search by Park Name, District, or Facility:</h2>
+    Search:
+    <input type="text" v-model="search" placeholder="search name, district, facility" />
+    <table>
+      <thead>
+        <tr>
+          <th>Park Name</th>
+          <th>District</th>
+          <th>Facility</th>
+          <th>Park ID</th>
+          <th>Address</th>
+          <th>Hours</th>
+          <th>More Info</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr v-for="park in filterBy(parks, search, 'name', 'district', 'facility')" v-bind:key="park.id">
+          <td>{{ park.name }}</td>
+          <td>{{ park.district }}</td>
+          <td>{{ park.facility }}</td>
+          <td>{{ park.id }}</td>
+          <td>{{ park.address }}</td>
+          <td>{{ park.hours }}</td>
+
+          <td><router-link v-bind:to="`/parks/${park.id}`">Info</router-link></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
   </div>
 </template>
 

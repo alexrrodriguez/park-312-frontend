@@ -2,6 +2,8 @@
   <div class="park-event-edit">
     <h1>Edit Park Event</h1>
     <form v-on:submit.prevent="updateParkEvent(park_event)">
+      <h2>PARK:</h2>
+      <h3>{{ park_event.name }}</h3>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
@@ -15,6 +17,7 @@
       <input type="text" v-model="park_event.attending" />
       <input type="submit" value="Update" />
     </form>
+    <router-link to="/park_events">Back To Your Park Events</router-link>
   </div>
 </template>
 
