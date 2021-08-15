@@ -53,6 +53,7 @@
           <th>Park Name</th>
           <th>District</th>
           <th>Facility</th>
+          <th>Park ID</th>
           <th>Address</th>
           <th>Hours</th>
           <th>Indoor</th>
@@ -66,6 +67,7 @@
           <td>Name: {{ park.name }}</td>
           <td>District: {{ park.district }}</td>
           <td>Facility: {{ park.facility }}</td>
+          <td>Park ID: {{ park.id }}</td>
           <td>Address: {{ park.address }}</td>
           <td>Hours: {{ park.hours }}</td>
           <td>Indoor: {{ park.indoor }}</td>
