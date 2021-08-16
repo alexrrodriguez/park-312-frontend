@@ -21,6 +21,10 @@
           <input type="text" v-model="newParkEventParams.name" />
         </li>
         <li>
+          Event Name:
+          <input type="text" v-model="newParkEventParams.event_name" />
+        </li>
+        <li>
           Park ID:
           <input type="text" v-model="newParkEventParams.park_id" />
         </li>

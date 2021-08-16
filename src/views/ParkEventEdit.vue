@@ -4,11 +4,13 @@
     <form v-on:submit.prevent="updateParkEvent(park_event)">
       <h2>PARK:</h2>
       <h3>{{ park_event.name }}</h3>
+      <h2>FACILITY:</h2>
+      <h3>{{ park_event.facility }}</h3>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
-      Facility:
-      <input type="text" v-model="park_event.facility" />
+      Event Name:
+      <input type="text" v-model="park_event.event_name" />
       Date:
       <input type="text" v-model="park_event.date" />
       Time:

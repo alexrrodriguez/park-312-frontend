@@ -15,7 +15,7 @@
     <!-- <p>{{ park.park_events }}</p> -->
     <div v-if="park.park_events.length > 2">
       <div>
-        <h3>Event: {{ park.park_events[0]["facility"] }}</h3>
+        <h3>Event Name: {{ park.park_events[0]["event_name"] }}</h3>
         <h4>Event Creator: {{ park.users[0]["name"] }}</h4>
         <p>Email: {{ park.users[0]["email"] }}</p>
         <p>Date: {{ park.park_events[0]["date"] }}</p>
@@ -23,7 +23,7 @@
         <p>Attending: {{ park.park_events[0]["attending"] }}</p>
       </div>
       <div>
-        <h3>Event: {{ park.park_events[1]["facility"] }}</h3>
+        <h3>Event Name: {{ park.park_events[1]["event_name"] }}</h3>
         <h4>Event Creator: {{ park.users[1]["name"] }}</h4>
         <p>Email: {{ park.users[1]["email"] }}</p>
         <p>Date: {{ park.park_events[1]["date"] }}</p>
@@ -31,7 +31,7 @@
         <p>Attending: {{ park.park_events[1]["attending"] }}</p>
       </div>
       <div>
-        <h3>Event: {{ park.park_events[2]["facility"] }}</h3>
+        <h3>Event Name: {{ park.park_events[2]["event_name"] }}</h3>
         <h4>Event Creator: {{ park.users[2]["name"] }}</h4>
         <p>Email: {{ park.users[2]["email"] }}</p>
         <p>Date: {{ park.park_events[2]["date"] }}</p>
