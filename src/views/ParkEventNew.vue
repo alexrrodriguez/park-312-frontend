@@ -75,6 +75,42 @@
       </tbody>
     </table>
     <hr />
+    <div class="info">
+      <div class="element">
+        <p style="margin-bottom: 3px">
+          <a
+            href="https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y"
+            target="_blank"
+            style="font-size: 12px; font-weight: bold; text-decoration: none; color: #333333; font-family: arial"
+          >
+            Parks - Chicago Park District Facilities (current)
+          </a>
+        </p>
+        <iframe
+          width="700px"
+          title="Parks - Chicago Park District Facilities (current)"
+          height="500px"
+          src="https://data.cityofchicago.org/w/5yyk-qt9y/3q3f-6823?cur=pBqSF35NdLs&from=root"
+          frameborder="0"
+          scrolling="no"
+        >
+          <a
+            href="https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y"
+            title="Parks - Chicago Park District Facilities (current)"
+            target="_blank"
+          >
+            Parks - Chicago Park District Facilities (current)
+          </a>
+        </iframe>
+        <p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p>
+      </div>
+      <div>
+        DISTRICTS:
+        <a href="https://wikitravel.org/upload/shared//b/b3/Chicago_neighborhoods_map.png" target="_blank">
+          <img class="map element" src="../assets/Chicago_neighborhoods_map.png" alt="" />
+        </a>
+      </div>
+    </div>
     <h1>OR..</h1>
     <h1>Filter Search For Parks By District, Facility, Indoor/Outdoor!</h1>
     Search District:
@@ -140,54 +176,18 @@
 
       <tbody>
         <tr v-for="park in searchResult" :key="park.id">
-          <td>Name: {{ park.name }}</td>
-          <td>District: {{ park.district }}</td>
-          <td>Facility: {{ park.facility }}</td>
-          <td>Park ID: {{ park.id }}</td>
-          <td>Address: {{ park.address }}</td>
-          <td>Hours: {{ park.hours }}</td>
-          <td>Indoor: {{ park.indoor }}</td>
-          <td>Outdoor: {{ park.outdoor }}</td>
+          <td>{{ park.name }}</td>
+          <td>{{ park.district }}</td>
+          <td>{{ park.facility }}</td>
+          <td>{{ park.id }}</td>
+          <td>{{ park.address }}</td>
+          <td>{{ park.hours }}</td>
+          <td>{{ park.indoor }}</td>
+          <td>{{ park.outdoor }}</td>
           <td><router-link v-bind:to="`/parks/${park.id}`">Info</router-link></td>
         </tr>
       </tbody>
     </table>
-    <div class="info">
-      <div class="element">
-        <p style="margin-bottom: 3px">
-          <a
-            href="https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y"
-            target="_blank"
-            style="font-size: 12px; font-weight: bold; text-decoration: none; color: #333333; font-family: arial"
-          >
-            Parks - Chicago Park District Facilities (current)
-          </a>
-        </p>
-        <iframe
-          width="700px"
-          title="Parks - Chicago Park District Facilities (current)"
-          height="500px"
-          src="https://data.cityofchicago.org/w/5yyk-qt9y/3q3f-6823?cur=pBqSF35NdLs&from=root"
-          frameborder="0"
-          scrolling="no"
-        >
-          <a
-            href="https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y"
-            title="Parks - Chicago Park District Facilities (current)"
-            target="_blank"
-          >
-            Parks - Chicago Park District Facilities (current)
-          </a>
-        </iframe>
-        <p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p>
-      </div>
-      <div>
-        DISTRICTS:
-        <a href="https://wikitravel.org/upload/shared//b/b3/Chicago_neighborhoods_map.png" target="_blank">
-          <img class="map element" src="../assets/Chicago_neighborhoods_map.png" alt="" />
-        </a>
-      </div>
-    </div>
   </div>
 </template>
 <style>

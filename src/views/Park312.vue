@@ -1,7 +1,13 @@
 <template>
   <div class="parks-index">
     <h1>PARK 312</h1>
-    <h1>Search For Parks And Create Park Events In Chicago!</h1>
+    <hr />
+    <h1>Search For Parks In Chicago!</h1>
+    <h2>Or</h2>
+    <h1>
+      <router-link v-bind:to="`/signup`">Signup</router-link>
+      to Create Your Own Park Event!
+    </h1>
     <hr />
     <div class="info">
       <div class="element">
@@ -68,7 +74,7 @@
         </tr>
       </tbody>
     </table>
-    <h1>OR..</h1>
+    <h2>Or..</h2>
     <h1>Filter Search For Parks By District, Facility, Indoor/Outdoor!</h1>
     Search District:
     <select v-model="selectedDistrict">
@@ -133,14 +139,14 @@
 
       <tbody>
         <tr v-for="park in searchResult" :key="park.id">
-          <td>Name: {{ park.name }}</td>
-          <td>District: {{ park.district }}</td>
-          <td>Facility: {{ park.facility }}</td>
-          <td>Park ID: {{ park.id }}</td>
-          <td>Address: {{ park.address }}</td>
-          <td>Hours: {{ park.hours }}</td>
-          <td>Indoor: {{ park.indoor }}</td>
-          <td>Outdoor: {{ park.outdoor }}</td>
+          <td>{{ park.name }}</td>
+          <td>{{ park.district }}</td>
+          <td>{{ park.facility }}</td>
+          <td>{{ park.id }}</td>
+          <td>{{ park.address }}</td>
+          <td>{{ park.hours }}</td>
+          <td>{{ park.indoor }}</td>
+          <td>{{ park.outdoor }}</td>
           <td><router-link v-bind:to="`/parks/${park.id}`">Info</router-link></td>
         </tr>
       </tbody>
@@ -159,7 +165,7 @@
 }
 table {
   overflow-y: scroll;
-  height: 350px;
+  height: 340px;
   display: block;
   border: 1px solid;
   margin-top: 50px;
