@@ -16,6 +16,10 @@
         <input type="email" v-model="newUserParams.email" />
       </div>
       <div>
+        <label>Image:</label>
+        <input type="text" v-model="newUserParams.image" />
+      </div>
+      <div>
         <label>Password:</label>
         <input type="password" v-model="newUserParams.password" />
         <small v-if="newUserParams.password.length > 0 && newUserParams.password.length < 6" class="text-danger">

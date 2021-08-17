@@ -1,8 +1,8 @@
 <template>
   <div class="park-events-index">
     <h1>{{ name }}</h1>
-    <h2>{{ email }}</h2>
-    <p>img placeholder</p>
+    <img class="profileimg" v-bind:src="image" v-bind:alt="name" />
+    <h2>Email: {{ email }}</h2>
     <hr />
     <h1>Park Events:</h1>
     <div v-for="park_event in park_events" v-bind:key="park_event.id">
@@ -16,7 +16,13 @@
     </div>
   </div>
 </template>
-
+<style scoped>
+.profileimg {
+  border-radius: 50%;
+  max-width: 10%;
+  height: auto;
+}
+</style>
 <script>
 import axios from "axios";
 export default {
@@ -25,6 +31,7 @@ export default {
       park_events: [],
       name: "",
       email: "",
+      image: "",
     };
   },
   created: function () {
@@ -37,6 +44,7 @@ export default {
         this.park_events = response.data;
         this.name = response.data[0]["user"]["name"];
         this.email = response.data[0]["user"]["email"];
+        this.image = response.data[0]["user"]["image"];
       });
     },
   },
