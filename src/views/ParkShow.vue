@@ -39,6 +39,7 @@ export default {
       this.events = response.data.park_events;
       this.users = response.data.users;
       console.log(response.data.park_events);
+      console.log(response.data.users);
     });
   },
   methods: {},

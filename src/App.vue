@@ -3,9 +3,9 @@
     <div id="nav">
       <router-link to="/">Park312</router-link>
       |
-      <router-link to="/park_event/new">Create Park Event</router-link>
+      <router-link to="/park_event/new" v-if="isLoggedIn()">Create Park Event</router-link>
       |
-      <router-link to="/park_events">Your Park Events</router-link>
+      <router-link to="/park_events" v-if="isLoggedIn()">Profile Page</router-link>
       |
       <router-link to="/about">About</router-link>
       |
