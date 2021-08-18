@@ -91,7 +91,7 @@
           </a>
         </p>
         <iframe
-          width="700px"
+          width="900px"
           title="Parks - Chicago Park District Facilities (current)"
           height="500px"
           src="https://data.cityofchicago.org/w/5yyk-qt9y/3q3f-6823?cur=pBqSF35NdLs&from=root"
@@ -108,15 +108,16 @@
         </iframe>
         <p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p>
       </div>
-      <div>
-        DISTRICTS:
-        <a href="https://wikitravel.org/upload/shared//b/b3/Chicago_neighborhoods_map.png" target="_blank">
-          <img class="map element" src="../assets/Chicago_neighborhoods_map.png" alt="" />
-        </a>
-      </div>
     </div>
     <h1>OR..</h1>
     <h1>Filter Search For Parks By District, Facility, Indoor/Outdoor!</h1>
+    District Map
+    <div>
+      <a href="https://wikitravel.org/upload/shared//b/b3/Chicago_neighborhoods_map.png" target="_blank">
+        <img class="map element" src="../assets/Chicago_neighborhoods_map.png" alt="" />
+      </a>
+    </div>
+    <br />
     Search District:
     <select v-model="selectedDistrict">
       <option value="">--Select a District--</option>

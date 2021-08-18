@@ -17,7 +17,8 @@
       <h3>Event Name: {{ event.event_name }}</h3>
       <p>Date: {{ event.date }}</p>
       <p>Time: {{ event.time }}</p>
-      <p>Attending: {{ event.attending }}</p>
+      <h3>Attending:</h3>
+      <p>{{ event.attending }}</p>
     </div>
   </div>
 </template>
