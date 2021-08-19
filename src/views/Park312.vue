@@ -1,13 +1,32 @@
 <template>
   <div class="parks-index">
-    <h1>PARK 312</h1>
+    <section
+      id="page-title"
+      class="page-title-parallax page-title-dark"
+      style="background-image: url('images/parallax/8.jpg'); background-size: cover; padding: 120px 0"
+      data-bottom-top="background-position:0px 0px;"
+      data-top-bottom="background-position:0px -300px;"
+    >
+      <div class="container clearfix">
+        <h2>PARK 312</h2>
+        <br />
+        <h5>Search For Parks In Chicago!</h5>
+        <h5>Or</h5>
+        <h5>
+          <router-link v-bind:to="`/signup`">Signup</router-link>
+          to Create Your Own Park Event!
+        </h5>
+      </div>
+    </section>
+    <!-- #page-title end -->
+    <!-- <h1>PARK 312</h1>
     <hr />
     <h1>Search For Parks In Chicago!</h1>
     <h2>Or</h2>
     <h1>
       <router-link v-bind:to="`/signup`">Signup</router-link>
       to Create Your Own Park Event!
-    </h1>
+    </h1> -->
     <hr />
     <div class="info">
       <div class="element">
