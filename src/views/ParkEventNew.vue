@@ -8,7 +8,8 @@
       data-top-bottom="background-position:0px -300px;"
     >
       <div class="container clearfix">
-        <h1>Add A New Park Event To Your Schedule!</h1>
+        <h1>Add A Park Event To Your Schedule!</h1>
+        <br />
         <br />
         <!-- weather widget start -->
         <a target="_blank" href="https://www.booked.net/weather/chicago-18041">
@@ -20,7 +21,6 @@
         <!-- weather widget end -->
       </div>
     </section>
-    <hr />
     <section id="content">
       <div class="content-wrap">
         <div class="container clearfix">

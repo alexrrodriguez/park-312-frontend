@@ -7,14 +7,13 @@
       data-bottom-top="background-position:0px 0px;"
       data-top-bottom="background-position:0px -300px;"
     >
-      <div class="container clearfix">
+      <div class="container clearfix home-title">
         <h2>PARK 312</h2>
-        <br />
         <h5>Search For Parks In Chicago!</h5>
         <h5>Or</h5>
         <h5>
           <router-link v-bind:to="`/signup`">Signup</router-link>
-          to Create Your Own Park Event!
+          To Create Park Events!
         </h5>
       </div>
     </section>
@@ -157,9 +156,10 @@
           <option value="YES">INDOOR</option>
           <option value="YES">OUTDOOR</option>
         </select>
-        <div>
-          <button @click="searchFilter">Search</button>
-        </div>
+      </div>
+      <br />
+      <div>
+        <button @click="searchFilter">Search</button>
       </div>
     </section>
     <section id="content">
@@ -203,6 +203,12 @@
 </template>
 
 <style>
+.home-screen-title {
+  margin: 0 0 0 0;
+}
+.home-title {
+  text-align: center;
+}
 .home_id {
   width: 400px;
 }
