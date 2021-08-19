@@ -154,6 +154,7 @@
         <br />
         <h1>Filter Search For Parks By District, Facility, Indoor/Outdoor!</h1>
         <br />
+        <br />
         District Map
         <div>
           <a href="https://wikitravel.org/upload/shared//b/b3/Chicago_neighborhoods_map.png" target="_blank">
