@@ -1,10 +1,37 @@
 <template>
   <div class="park-events-index">
-    <h1>{{ name }}</h1>
+    <br />
+    <section id="content">
+      <div class="content-wrap">
+        <div class="container clearfix">
+          <div class="row col-mb-50">
+            <div class="col-12">
+              <img
+                v-bind:src="image"
+                v-bind:alt="name"
+                class="alignleft img-circle img-thumbnail my-0"
+                style="max-width: 100px"
+              />
+
+              <div class="heading-block border-0">
+                <h3>{{ name }}</h3>
+                <span>Email: {{ email }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <h1>{{ name }}</h1>
     <img class="profileimg" v-bind:src="image" v-bind:alt="name" />
-    <h2>Email: {{ email }}</h2>
+    <h2>Email: {{ email }}</h2> -->
     <hr />
-    <h1>Park Events:</h1>
+    <section id="page-title" class="page-title-center">
+      <div class="container clearfix">
+        <h1>Park Events:</h1>
+      </div>
+    </section>
+    <hr />
     <div v-for="park_event in park_events" v-bind:key="park_event.id">
       <h2>PARK NAME: {{ park_event.name }}</h2>
       <h3>FACILITY: {{ park_event.facility }}</h3>
@@ -13,6 +40,7 @@
       <p>TIME: {{ park_event.time }}</p>
       <p>ATTENDING: {{ park_event.attending }}</p>
       <router-link v-bind:to="`/park_events/${park_event.id}`">More Details</router-link>
+      <hr />
     </div>
   </div>
 </template>

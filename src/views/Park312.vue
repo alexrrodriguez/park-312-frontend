@@ -9,12 +9,33 @@
     >
       <div class="container clearfix home-title">
         <h2>PARK 312</h2>
-        <h5>Search For Parks In Chicago!</h5>
+        <h5>Search For Parks In Chicago</h5>
         <h5>Or</h5>
         <h5>
           <router-link v-bind:to="`/signup`">Signup</router-link>
           To Create Park Events!
         </h5>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </section>
     <!-- #page-title end -->
