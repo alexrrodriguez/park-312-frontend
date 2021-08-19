@@ -28,7 +28,7 @@
     <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
-        <h1>Park Events:</h1>
+        <h1>Your Park Events:</h1>
       </div>
     </section>
     <hr />
