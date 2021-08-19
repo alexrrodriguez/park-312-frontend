@@ -1,6 +1,12 @@
 <template>
   <div class="park-event-new">
-    <section id="page-title" class="page-title-center">
+    <section
+      id="page-title"
+      class="page-title-parallax page-title-dark"
+      style="background-image: url('images/parallax/8.jpg'); background-size: cover; padding: 120px 0"
+      data-bottom-top="background-position:0px 0px;"
+      data-top-bottom="background-position:0px -300px;"
+    >
       <div class="container clearfix">
         <h1>Add A New Park Event To Your Schedule!</h1>
         <br />
@@ -15,45 +21,58 @@
       </div>
     </section>
     <hr />
-
-    <form v-on:submit.prevent="createParkEvent()">
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      <ul>
-        <li>
-          Park Name:
-          <input type="text" v-model="newParkEventParams.name" />
-        </li>
-        <li>
-          Event Name:
-          <input type="text" v-model="newParkEventParams.event_name" />
-        </li>
-        <li>
-          Park ID:
-          <input type="text" v-model="newParkEventParams.park_id" />
-        </li>
-        <li>
-          Facility:
-          <input type="text" v-model="newParkEventParams.facility" />
-        </li>
-        <li>
-          Date:
-          <input type="text" v-model="newParkEventParams.date" />
-        </li>
-        <li>
-          Time:
-          <input type="text" v-model="newParkEventParams.time" />
-        </li>
-        <li>
-          Attending:
-          <input type="text" v-model="newParkEventParams.attending" />
-        </li>
-        <li>
-          <input type="submit" value="Create" />
-        </li>
-      </ul>
-    </form>
+    <section id="content">
+      <div class="content-wrap">
+        <div class="container clearfix">
+          <div class="row gutter-40 col-mb-80">
+            <div>
+              <h1 class="create-park-head">Create Park Event</h1>
+              <form class="create-park-event" style="max-width: 25rem" v-on:submit.prevent="createParkEvent()">
+                <div class="form-group">
+                  <ul>
+                    <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+                  </ul>
+                  <ul>
+                    <li>
+                      Park Name:
+                      <input class="form-control" type="text" v-model="newParkEventParams.name" />
+                    </li>
+                    <li>
+                      Event Name:
+                      <input class="form-control" type="text" v-model="newParkEventParams.event_name" />
+                    </li>
+                    <li>
+                      Park ID:
+                      <input class="form-control" type="text" v-model="newParkEventParams.park_id" />
+                    </li>
+                    <li>
+                      Facility:
+                      <input class="form-control" type="text" v-model="newParkEventParams.facility" />
+                    </li>
+                    <li>
+                      Date:
+                      <input class="form-control" type="text" v-model="newParkEventParams.date" />
+                    </li>
+                    <li>
+                      Time:
+                      <input class="form-control" type="text" v-model="newParkEventParams.time" />
+                    </li>
+                    <li>
+                      Attending:
+                      <input class="form-control" type="text" v-model="newParkEventParams.attending" />
+                    </li>
+                    <br />
+                    <li>
+                      <input type="submit" value="Create" />
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
@@ -142,6 +161,7 @@
           </a>
         </div>
         <br />
+        <br />
         Search District:
         <select v-model="selectedDistrict">
           <option value="">--Select a District--</option>
@@ -185,9 +205,10 @@
           <option value="YES">INDOOR</option>
           <option value="YES">OUTDOOR</option>
         </select>
-        <div>
-          <button @click="searchFilter">Search</button>
-        </div>
+      </div>
+      <br />
+      <div>
+        <button @click="searchFilter">Search</button>
       </div>
     </section>
     <section id="content">
@@ -232,6 +253,12 @@
 <style>
 .park_event_search {
   width: 400px;
+}
+.create-park-event {
+  margin: 0 auto;
+}
+.create-park-head {
+  text-align: center;
 }
 </style>
 
