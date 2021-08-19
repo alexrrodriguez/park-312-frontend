@@ -1,11 +1,59 @@
 <template>
   <div class="park-event-edit">
-    <h1>Edit Park Event</h1>
+    <section id="page-title" class="page-title-center">
+      <div class="container clearfix">
+        <h1>Edit Park Event</h1>
+      </div>
+    </section>
+    <section id="content">
+      <div class="content-wrap">
+        <div class="container clearfix">
+          <div class="row">
+            <div class="col-md-8 ps-md-4">
+              <div class="entry-title title-sm">
+                <h2>
+                  <a href="#">EVENT NAME: {{ park_event.event_name }}</a>
+                </h2>
+                <h3>
+                  <a href="#">PARK NAME: {{ park_event.name }}</a>
+                </h3>
+                <h3>
+                  <a href="#">FACILITY: {{ park_event.facility }}</a>
+                </h3>
+              </div>
+              <div class="entry-meta">
+                <ul>
+                  <li><span class="badge bg-warning text-dark px-1 py-1">Public</span></li>
+                  <li>
+                    <a href="#">
+                      <i class="icon-time"></i>
+                      {{ park_event.time }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="icon-map-marker2"></i>
+                      DATE: {{ park_event.date }}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="entry-content">
+                <h4>ATTENDING:</h4>
+                <p>{{ park_event.attending }}</p>
+                <hr />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <h1>Edit Park Event</h1>
+    <h2>PARK:</h2>
+    <h3>{{ park_event.name }}</h3>
+    <h2>FACILITY:</h2>
+    <h3>{{ park_event.facility }}</h3> -->
     <form v-on:submit.prevent="updateParkEvent(park_event)">
-      <h2>PARK:</h2>
-      <h3>{{ park_event.name }}</h3>
-      <h2>FACILITY:</h2>
-      <h3>{{ park_event.facility }}</h3>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>

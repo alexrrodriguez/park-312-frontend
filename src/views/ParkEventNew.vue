@@ -7,7 +7,7 @@
       data-bottom-top="background-position:0px 0px;"
       data-top-bottom="background-position:0px -300px;"
     >
-      <div class="container clearfix">
+      <div class="container clearfix new-event-title">
         <h1>Add A Park Event To Your Schedule!</h1>
         <br />
         <br />
@@ -155,7 +155,8 @@
         <h1>Filter Search For Parks By District, Facility, Indoor/Outdoor!</h1>
         <br />
         <br />
-        District Map
+        District Map -
+        <i>(Click for Full Image)</i>
         <div>
           <a href="https://wikitravel.org/upload/shared//b/b3/Chicago_neighborhoods_map.png" target="_blank">
             <img class="map element" src="../assets/Chicago_neighborhoods_map.png" alt="" />
@@ -252,6 +253,9 @@
   </div>
 </template>
 <style>
+.new-event-title {
+  text-align: center;
+}
 .park_event_search {
   width: 400px;
 }

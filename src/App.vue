@@ -331,11 +331,12 @@
           <div class="row justify-content-between">
             <div class="col-12 col-lg-auto text-center text-lg-start">
               <p class="mb-3">Copyrights &copy; 2021</p>
-              <p class="mb-3">Created by Alexander Rodriguez</p>
-              <a href="https://github.com/alexrrodriguez" class="social-icon si-small si-rounded si-github">
-                <i class="icon-github"></i>
-                <i class="icon-github"></i>
-              </a>
+              <p class="mb-3">
+                Created by Alexander Rodriguez
+                <a href="https://github.com/alexrrodriguez" class="social-icon si-small si-rounded si-github">
+                  <i class="icon-github"></i>
+                </a>
+              </p>
             </div>
 
             <div class="col-12 col-lg-auto text-center text-lg-end">
