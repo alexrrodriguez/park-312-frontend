@@ -28,9 +28,7 @@
     <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
-        <h1>{{ name }}</h1>
-        <br />
-        <h2>Park Events:</h2>
+        <h2>Your Park Events:</h2>
       </div>
     </section>
     <hr />
