@@ -41,7 +41,7 @@
                     />
                   </div>
                   <div class="col-12 form-group">
-                    <label for="" class="text-capitalize fw-semibold">Image</label>
+                    <label for="" class="text-capitalize fw-semibold">Image URL</label>
                     <input
                       type="text"
                       id="template-op-form-email"
@@ -82,7 +82,16 @@
                       Must match Password!
                     </small>
                   </div>
-                  <div class="col-12 form-group"><input type="submit" value="Submit" /></div>
+                  <div class="col-12 form-group">
+                    <button
+                      type="submit"
+                      class="fw-normal text-capitalize button button-border button-light button-circle m-0"
+                      value="submit"
+                    >
+                      Register Now
+                    </button>
+                    <!-- <input type="submit" value="Submit" /> -->
+                  </div>
                 </form>
                 <p class="mb-0">
                   <small class="fw-light"><em>* No Credit Card Required</em></small>
