@@ -8,22 +8,16 @@
       data-top-bottom="background-position:0px -300px;"
     >
       <div class="container clearfix home-title">
-        <h2>PARK 312</h2>
-        <h5>Search For Parks In Chicago</h5>
-        <h5>Or</h5>
-        <h5>
-          <router-link v-bind:to="`/signup`">Signup</router-link>
-          To Create Park Events!
-        </h5>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <span class="park312-title">
+          <br />
+          <h2 class="park312-head-title">PARK 312</h2>
+          <h5>Search For Parks In Chicago</h5>
+          <h5>Or</h5>
+          <h5>
+            <router-link v-bind:to="`/signup`">Signup</router-link>
+            To Create Park Events!
+          </h5>
+        </span>
         <br />
         <br />
         <br />
@@ -38,6 +32,7 @@
         <br />
       </div>
     </section>
+    <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
         <h1>Search For Parks By District, Facility, And Indoor/Outdoor!</h1>
@@ -147,6 +142,7 @@
       <router-link v-bind:to="`/signup`">Signup</router-link>
       to Create Your Own Park Event!
     </h1> -->
+    <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
         <h1>Or</h1>
@@ -379,6 +375,17 @@
 }
 .home-title {
   text-align: center;
+}
+.park312-title {
+  border: 4px solid black;
+  width: 25%;
+  margin: auto;
+  display: inline-flex;
+  background-color: white;
+}
+.park312-head-title {
+  margin: 0 20px 30px;
+  text-decoration: underline;
 }
 .home_id {
   width: 400px;

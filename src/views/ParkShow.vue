@@ -5,6 +5,8 @@
     <section id="page-title">
       <div class="container clearfix">
         <h1>Park: {{ park.name }}</h1>
+        <br />
+        <h3>Facility: {{ park.facility }}</h3>
         <!-- <ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="#">Home</a></li>
 					<li class="breadcrumb-item"><a href="#">Events</a></li>
@@ -70,8 +72,11 @@
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
         <h2>UPCOMING PARK EVENTS AT {{ park.name }}:</h2>
+        <br />
+        <h3>Facility: {{ park.facility }}</h3>
       </div>
     </section>
+    <hr />
     <!-- <p>{{ park.park_events }}</p> -->
     <!-- Content
 		============================================= -->
