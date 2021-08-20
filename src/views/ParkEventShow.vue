@@ -1,5 +1,10 @@
 <template>
   <div class="park-event-show">
+    <section id="page-title" class="page-title-center">
+      <div class="container clearfix">
+        <h1>Event Page</h1>
+      </div>
+    </section>
     <section id="content">
       <div class="content-wrap">
         <div class="container clearfix">

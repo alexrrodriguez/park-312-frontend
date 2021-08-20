@@ -11,6 +11,8 @@
         <h1>Add A Park Event To Your Schedule!</h1>
         <br />
         <br />
+        <span>Weekly Weather Forecast</span>
+        <br />
         <!-- weather widget start -->
         <a target="_blank" href="https://www.booked.net/weather/chicago-18041">
           <img
@@ -115,39 +117,6 @@
         </div>
       </div>
     </section>
-    <hr />
-    <section id="page-title" class="page-title-center">
-      <div class="container clearfix">
-        <div class="info">
-          <div class="element">
-            <p style="margin-bottom: 3px">
-              <a
-                href="https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y"
-                target="_blank"
-                style="font-size: 12px; font-weight: bold; text-decoration: none; color: #333333; font-family: arial"
-              ></a>
-            </p>
-            <iframe
-              width="900px"
-              title="Parks - Chicago Park District Facilities (current)"
-              height="500px"
-              src="https://data.cityofchicago.org/w/5yyk-qt9y/3q3f-6823?cur=pBqSF35NdLs&from=root"
-              frameborder="0"
-              scrolling="no"
-            >
-              <a
-                href="https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y"
-                title="Parks - Chicago Park District Facilities (current)"
-                target="_blank"
-              >
-                Parks - Chicago Park District Facilities (current)
-              </a>
-            </iframe>
-            <p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
         <h1>OR..</h1>
@@ -246,6 +215,43 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section id="page-title" class="page-title-center">
+      <div class="container clearfix">
+        <h1>Chicago Interactive Park Map</h1>
+        <br />
+        <p>Click The Blue Arrow To Search By Address</p>
+        <br />
+        <div class="info">
+          <div class="element">
+            <p style="margin-bottom: 3px">
+              <a
+                href="https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y"
+                target="_blank"
+                style="font-size: 12px; font-weight: bold; text-decoration: none; color: #333333; font-family: arial"
+              ></a>
+            </p>
+            <iframe
+              width="900px"
+              title="Parks - Chicago Park District Facilities (current)"
+              height="500px"
+              src="https://data.cityofchicago.org/w/5yyk-qt9y/3q3f-6823?cur=pBqSF35NdLs&from=root"
+              frameborder="0"
+              scrolling="no"
+            >
+              <a
+                href="https://data.cityofchicago.org/Parks-Recreation/Parks-Chicago-Park-District-Facilities-current-/5yyk-qt9y"
+                title="Parks - Chicago Park District Facilities (current)"
+                target="_blank"
+              >
+                Parks - Chicago Park District Facilities (current)
+              </a>
+            </iframe>
+            <p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p>
           </div>
         </div>
       </div>
