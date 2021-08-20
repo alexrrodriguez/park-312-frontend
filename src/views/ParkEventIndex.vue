@@ -42,10 +42,10 @@
                   <a href="#">EVENT NAME: {{ park_event.event_name }}</a>
                 </h2>
                 <h3>
-                  <a href="#">FACILITY: {{ park_event.facility }}</a>
+                  <a href="#">PARK NAME: {{ park_event.name }}</a>
                 </h3>
                 <h3>
-                  <a href="#">PARK NAME: {{ park_event.name }}</a>
+                  <a href="#">FACILITY: {{ park_event.facility }}</a>
                 </h3>
               </div>
               <div class="entry-meta">
