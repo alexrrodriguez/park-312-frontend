@@ -28,7 +28,10 @@
     <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
+        <br />
+        <br />
         <h2>Your Park Events:</h2>
+        <br />
       </div>
     </section>
     <hr />

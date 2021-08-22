@@ -38,6 +38,7 @@
 
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
+        <br />
         <h5>
           <span>Search For Parks And Find Park Events In Chicago</span>
         </h5>
@@ -53,7 +54,6 @@
         <hr />
         <br />
         <br />
-        <br />
         <h1>Search For Parks By District, Facility, And Indoor/Outdoor</h1>
         <br />
         <br />
@@ -65,53 +65,73 @@
           </a>
         </div>
         <br />
-        Search District:
-        <select v-model="selectedDistrict">
-          <option value="">--Select a District--</option>
-          <option value="FAR NORTH SIDE">FAR NORTH SIDE</option>
-          <option value="NORTHWEST SIDE">NORTHWEST SIDE</option>
-          <option value="NORTH SIDE">NORTH SIDE</option>
-          <option value="CENTRAL CHICAGO">CENTRAL CHICAGO</option>
-          <option value="WEST SIDE">WEST SIDE</option>
-          <option value="SOUTHWEST SIDE">SOUTHWEST SIDE</option>
-          <option value="SOUTH SIDE">SOUTH SIDE</option>
-          <option value="FAR SOUTHWEST SIDE">FAR SOUTHWEST SIDE</option>
-          <option value="FAR SOUTHEAST SIDE">FAR SOUTHEAST SIDE</option>
-        </select>
-        Search Facility:
-        <select v-model="selectedFacility">
-          <option value="">--Select a Facility--</option>
-          <option value="BASEBALL">BASEBALL</option>
-          <option value="BASKETBALL">BASKETBALL</option>
-          <option value="BEACH">BEACH</option>
-          <option value="BOXING">BOXING</option>
-          <option value="COMMUNITY GARDEN">COMMUNITY GARDEN</option>
-          <option value="FITNESS CENTER">FITNESS CENTER</option>
-          <option value="FOOTBALL">FOOTBALL</option>
-          <option value="GYMNASIUM">GYMNASIUM</option>
-          <option value="HANDBALL">HANDBALL</option>
-          <option value="HORSESHOE">HORSESHOE</option>
-          <option value="ICESKATING">ICESKATING</option>
-          <option value="PLAYGROUND">PLAYGROUND</option>
-          <option value="POOL">POOL</option>
-          <option value="ROLLER COURT">ROLLER COURT</option>
-          <option value="SOCCER">SOCCER</option>
-          <option value="SOFTBALL">SOFTBALL</option>
-          <option value="TENNIS">TENNIS</option>
-          <option value="TRACK">TRACK</option>
-          <option value="TURF FIELD">TURF FIELD</option>
-          <option value="VOLLEYBALL">VOLLEYBALL</option>
-        </select>
-        Indoor/Outdoor:
-        <select>
-          <option value="">--Select Indoor/Outdoor--</option>
-          <option value="YES">INDOOR</option>
-          <option value="YES">OUTDOOR</option>
-        </select>
-      </div>
-      <br />
-      <div>
-        <button @click="searchFilter">Search</button>
+        <section id="page-title" class="page-title-center">
+          <div>
+            <div class="container clearfix">
+              <div class="row gutter-40 col-mb-80">
+                <div class="postcontent col-lg-12">
+                  <form style="max-width: 35rem" class="filter-search">
+                    <div class="form-group">
+                      <h1>Search:</h1>
+                      <br />
+                      <label for="exampleFormControlSelect1">District:</label>
+                      <select class="form-select" id="exampleFormControlSelect1" v-model="selectedDistrict">
+                        <option value="">--Select a District--</option>
+                        <option value="FAR NORTH SIDE">FAR NORTH SIDE</option>
+                        <option value="NORTHWEST SIDE">NORTHWEST SIDE</option>
+                        <option value="NORTH SIDE">NORTH SIDE</option>
+                        <option value="CENTRAL CHICAGO">CENTRAL CHICAGO</option>
+                        <option value="WEST SIDE">WEST SIDE</option>
+                        <option value="SOUTHWEST SIDE">SOUTHWEST SIDE</option>
+                        <option value="SOUTH SIDE">SOUTH SIDE</option>
+                        <option value="FAR SOUTHWEST SIDE">FAR SOUTHWEST SIDE</option>
+                        <option value="FAR SOUTHEAST SIDE">FAR SOUTHEAST SIDE</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Facility:</label>
+                      <select class="form-select" id="exampleFormControlSelect1" v-model="selectedFacility">
+                        <option value="">--Select a Facility--</option>
+                        <option value="BASEBALL">BASEBALL</option>
+                        <option value="BASKETBALL">BASKETBALL</option>
+                        <option value="BEACH">BEACH</option>
+                        <option value="BOXING">BOXING</option>
+                        <option value="COMMUNITY GARDEN">COMMUNITY GARDEN</option>
+                        <option value="FITNESS CENTER">FITNESS CENTER</option>
+                        <option value="FOOTBALL">FOOTBALL</option>
+                        <option value="GYMNASIUM">GYMNASIUM</option>
+                        <option value="HANDBALL">HANDBALL</option>
+                        <option value="HORSESHOE">HORSESHOE</option>
+                        <option value="ICESKATING">ICESKATING</option>
+                        <option value="PLAYGROUND">PLAYGROUND</option>
+                        <option value="POOL">POOL</option>
+                        <option value="ROLLER COURT">ROLLER COURT</option>
+                        <option value="SOCCER">SOCCER</option>
+                        <option value="SOFTBALL">SOFTBALL</option>
+                        <option value="TENNIS">TENNIS</option>
+                        <option value="TRACK">TRACK</option>
+                        <option value="TURF FIELD">TURF FIELD</option>
+                        <option value="VOLLEYBALL">VOLLEYBALL</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">Indoor/Outdoor:</label>
+                      <select class="form-select" id="exampleFormControlSelect1">
+                        <option value="">--Select Indoor/Outdoor--</option>
+                        <option value="YES">INDOOR</option>
+                        <option value="YES">OUTDOOR</option>
+                      </select>
+                    </div>
+                  </form>
+                  <div>
+                    <button @click="searchFilter">Search</button>
+                  </div>
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
     <section id="content">
@@ -152,22 +172,19 @@
       </div>
     </section>
     <br />
-    <!-- #page-title end -->
-    <!-- <h1>PARK 312</h1>
-    <hr />
-    <h1>Search For Parks In Chicago!</h1>
-    <h2>Or</h2>
-    <h1>
-      <router-link v-bind:to="`/signup`">Signup</router-link>
-      to Create Your Own Park Event!
-    </h1> -->
     <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
+        <br />
+        <h1>Or</h1>
+        <br />
         <h1>Search by Park Name:</h1>
         <br />
         Search:
         <input class="home_id" type="text" v-model="search" placeholder="park name.." />
+        <br />
+        <br />
+        <br />
       </div>
     </section>
     <section id="content">
@@ -210,6 +227,9 @@
     <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
+        <br />
+        <br />
+        <br />
         <h1>Chicago Interactive Park Map</h1>
         <br />
         <p>Click The Blue Arrow To Search By Address</p>
@@ -242,6 +262,7 @@
             <p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p>
           </div>
         </div>
+        <br />
       </div>
     </section>
     <!-- <section id="page-title" class="page-title-center">
@@ -391,6 +412,9 @@
 </template>
 
 <style>
+.filter-search {
+  display: inline-block;
+}
 .home-screen-title {
   margin: 0 0 0 0;
 }

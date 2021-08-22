@@ -2,7 +2,11 @@
   <div class="park-event-edit">
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
+        <br />
+        <br />
         <h1>Edit Park Event</h1>
+        <br />
+        <br />
       </div>
     </section>
     <section id="content">

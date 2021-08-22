@@ -4,6 +4,8 @@
 		============================================= -->
     <section id="page-title">
       <div class="container clearfix">
+        <br />
+        <br />
         <h1>Park: {{ park.name }}</h1>
         <br />
         <h3>Facility: {{ park.facility }}</h3>
@@ -12,6 +14,7 @@
 					<li class="breadcrumb-item"><a href="#">Events</a></li>
 					<li class="breadcrumb-item active" aria-current="page">Event Single</li>
 				</ol> -->
+        <br />
       </div>
     </section>
     <!-- #page-title end -->
@@ -71,9 +74,12 @@
     <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
-        <h2>UPCOMING PARK EVENTS AT {{ park.name }}:</h2>
+        <br />
+        <br />
+        <h2>UPCOMING PARK EVENTS AT {{ park.name }} PARK:</h2>
         <br />
         <h3>Facility: {{ park.facility }}</h3>
+        <br />
       </div>
     </section>
     <hr />
