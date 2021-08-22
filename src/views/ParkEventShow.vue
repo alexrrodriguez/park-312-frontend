@@ -15,6 +15,7 @@
           <div class="row">
             <div class="col-md-8 ps-md-4">
               <div class="entry-title title-sm">
+                <h1>Park Event:</h1>
                 <h2>
                   <a href="#">EVENT NAME: {{ park_event.event_name }}</a>
                 </h2>

@@ -4,7 +4,7 @@
       <div class="container clearfix">
         <br />
         <br />
-        <h1>Edit Park Event</h1>
+        <h1>Update Park Event</h1>
         <br />
         <br />
       </div>
@@ -15,6 +15,8 @@
           <div class="row">
             <div class="col-md-8 ps-md-4">
               <div class="entry-title title-sm">
+                <br />
+                <h1>Park Event:</h1>
                 <h2>
                   <a href="#">EVENT NAME: {{ park_event.event_name }}</a>
                 </h2>
@@ -52,28 +54,53 @@
         </div>
       </div>
     </section>
-    <!-- <h1>Edit Park Event</h1>
-    <h2>PARK:</h2>
-    <h3>{{ park_event.name }}</h3>
-    <h2>FACILITY:</h2>
-    <h3>{{ park_event.facility }}</h3> -->
-    <form v-on:submit.prevent="updateParkEvent(park_event)">
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      Event Name:
-      <input type="text" v-model="park_event.event_name" />
-      Date:
-      <input type="text" v-model="park_event.date" />
-      Time:
-      <input type="text" v-model="park_event.time" />
-      Attending:
-      <input type="text" v-model="park_event.attending" />
-      <input type="submit" value="Update" />
-    </form>
-    <router-link to="/park_events">Back To Your Park Events</router-link>
+    <section id="content">
+      <div>
+        <div class="container clearfix">
+          <div class="row gutter-40 col-mb-80">
+            <div class="postcontent col-lg-9">
+              <h2>Update Park Event:</h2>
+              <form v-on:submit.prevent="updateParkEvent(park_event)" style="max-width: 25rem">
+                <ul>
+                  <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+                </ul>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Event Name:</label>
+                  <br />
+                  <input class="form-control" type="text" v-model="park_event.event_name" />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Date:</label>
+                  <br />
+                  <input class="form-control" type="text" v-model="park_event.date" />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Time:</label>
+                  <br />
+                  <input class="form-control" type="text" v-model="park_event.time" />
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Attending:</label>
+                  <br />
+                  <input class="form-control event-update" type="text" v-model="park_event.attending" />
+                </div>
+                <button type="submit" value="Update" class="btn btn-primary mt-3">Update</button>
+
+                <!-- <input type="submit" value="Update" /> -->
+              </form>
+              <router-link to="/park_events">Back To Your Park Events</router-link>
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
+<style></style>
 
 <script>
 import axios from "axios";
