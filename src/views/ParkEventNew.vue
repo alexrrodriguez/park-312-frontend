@@ -3,7 +3,7 @@
     <section
       id="page-title"
       class="page-title-parallax page-title-dark"
-      style="background-image: url('images/parallax/8.jpg'); background-size: cover; padding: 120px 0"
+      style="background-image: url('images/chicago-park.jpg'); background-size: cover; padding: 120px 0"
       data-bottom-top="background-position:0px 0px;"
       data-top-bottom="background-position:0px -300px;"
     >
@@ -11,7 +11,7 @@
         <h1>Add A Park Event To Your Schedule!</h1>
         <br />
         <br />
-        <span>Weekly Weather Forecast</span>
+        <span>Weekly Weather Forecast:</span>
         <br />
         <!-- weather widget start -->
         <a target="_blank" href="https://www.booked.net/weather/chicago-18041">

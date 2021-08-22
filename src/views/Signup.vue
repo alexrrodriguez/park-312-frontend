@@ -10,7 +10,7 @@
               <div class="vertical-middle col-padding slider-element-fade">
                 <div class="heading-block border-bottom-0 bottommargin-sm">
                   <h1 style="font-size: 22px">Signup To Create Your Account</h1>
-                  <br />
+
                   <span style="font-size: 16px" class="fw-light text-capitalize ls1 mt-0">
                     Or
                     <router-link v-bind:to="`/login`">Login</router-link>
@@ -28,7 +28,7 @@
                       class="form-control not-dark"
                       v-model="newUserParams.name"
                     />
-                    <small>{{ 20 - newUserParams.name.length }} characters remaining</small>
+                    <small>{{ 50 - newUserParams.name.length }} characters remaining</small>
                   </div>
                   <div class="col-12 form-group">
                     <label for="" class="text-capitalize fw-semibold">Email</label>
@@ -118,7 +118,7 @@
       <!-- #slider end -->
     </div>
     <!-- #wrapper end -->
-    <form v-on:submit.prevent="submit()">
+    <!-- <form v-on:submit.prevent="submit()">
       <h1>Signup</h1>
 
       <ul>
@@ -161,7 +161,7 @@
     <h2>
       <router-link v-bind:to="`/login`">Login</router-link>
       to create a park event!
-    </h2>
+    </h2> -->
   </div>
 </template>
 

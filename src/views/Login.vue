@@ -81,6 +81,12 @@
                     <span class="d-none d-md-inline-block">or</span>
                     <a href="#" class="button button-rounded si-twitter si-colored">Twitter</a>
                   </div>
+                  <hr />
+                  <br />
+                  <h3>
+                    Don't Have An Account?
+                    <router-link v-bind:to="`/signup`">Signup Now!</router-link>
+                  </h3>
                 </div>
               </div>
 

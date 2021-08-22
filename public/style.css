@@ -6443,7 +6443,6 @@ body:not(.has-plugin-html5video) .video-wrap video {
 	position: relative;
 	padding: 4rem 0;
 	background-color: #F5F5F5;
-	border-bottom: 1px solid #EEE;
 }
 
 #page-title .container {

@@ -8,23 +8,26 @@
       data-top-bottom="background-position:0px -300px;"
     >
       <div class="container clearfix home-title">
-        <span class="park312-title">
-          <br />
-          <h2 class="park312-head-title">PARK 312</h2>
-          <h5>Search For Parks In Chicago</h5>
-          <h5>Or</h5>
-          <h5>
-            <router-link v-bind:to="`/signup`">Signup</router-link>
-            To Create Park Events!
-          </h5>
-        </span>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <section class="page-title-center">
+          <div class="container clearfix">
+            <br />
+            <h1 class="park312-head-title">PARK 312</h1>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
+        </section>
         <br />
         <br />
         <br />
@@ -32,10 +35,26 @@
         <br />
       </div>
     </section>
-    <hr />
+
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
-        <h1>Search For Parks By District, Facility, And Indoor/Outdoor!</h1>
+        <h5>
+          <span>Search For Parks And Find Park Events In Chicago</span>
+        </h5>
+        <h5><span>Or</span></h5>
+        <h5>
+          <span>
+            <router-link v-bind:to="`/signup`">Signup</router-link>
+            To Create Your Own Park Events!
+          </span>
+          <br />
+          <br />
+        </h5>
+        <hr />
+        <br />
+        <br />
+        <br />
+        <h1>Search For Parks By District, Facility, And Indoor/Outdoor</h1>
         <br />
         <br />
         <strong>District Map -</strong>
@@ -145,8 +164,6 @@
     <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
-        <h1>Or</h1>
-        <br />
         <h1>Search by Park Name:</h1>
         <br />
         Search:
@@ -166,6 +183,8 @@
                   <th>Park ID</th>
                   <th>Address</th>
                   <th>Hours</th>
+                  <th>Indoor</th>
+                  <th>Outdoor</th>
                   <th>More Info</th>
                 </tr>
               </thead>
@@ -178,7 +197,8 @@
                   <td>{{ park.id }}</td>
                   <td>{{ park.address }}</td>
                   <td>{{ park.hours }}</td>
-
+                  <td>{{ park.indoor }}</td>
+                  <td>{{ park.outdoor }}</td>
                   <td><router-link v-bind:to="`/parks/${park.id}`">Info</router-link></td>
                 </tr>
               </tbody>
@@ -187,6 +207,7 @@
         </div>
       </div>
     </section>
+    <hr />
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
         <h1>Chicago Interactive Park Map</h1>
@@ -203,9 +224,9 @@
               ></a>
             </p>
             <iframe
-              width="900px"
+              width="400px"
               title="Parks - Chicago Park District Facilities (current)"
-              height="500px"
+              height="600px"
               src="https://data.cityofchicago.org/w/5yyk-qt9y/3q3f-6823?cur=pBqSF35NdLs&from=root"
               frameborder="0"
               scrolling="no"
@@ -375,24 +396,26 @@
 }
 .home-title {
   text-align: center;
+  text-shadow: 2px 2px 2px black;
 }
 .park312-title {
-  border: 4px solid black;
   width: 25%;
   margin: auto;
   display: inline-flex;
   background-color: white;
 }
 .park312-head-title {
-  margin: 0 20px 30px;
-  text-decoration: underline;
+  margin: 0;
+}
+.page-title-312 {
+  background-color: #444;
 }
 .home_id {
   width: 400px;
 }
 .map {
   width: auto;
-  height: 600px;
+  height: 500px;
 }
 table {
   overflow-y: scroll;

@@ -9,11 +9,11 @@
             <!-- Logo
 						============================================= -->
             <div id="logo">
-              <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png">
+              <a href="/" class="standard-logo" data-dark-logo="images/logo-dark.png">
                 Park 312
                 <!-- <img src="images/logo.png" alt="Canvas Logo" /> -->
               </a>
-              <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png">
+              <a href="/" class="retina-logo" data-dark-logo="images/logo-dark@2x.png">
                 Park 312
                 <!-- <img src="images/logo@2x.png" alt="Canvas Logo" /> -->
               </a>
@@ -60,10 +60,10 @@
                   <a class="menu-link" href="/about"><div>About</div></a>
                 </li>
                 <li class="menu-item mega-menu">
-                  <a class="menu-link" href="/signup" v-if="!isLoggedIn()"><div>Signup</div></a>
+                  <a class="menu-link" href="/login" v-if="!isLoggedIn()"><div>Login</div></a>
                 </li>
                 <li class="menu-item">
-                  <a class="menu-link" href="/login" v-if="!isLoggedIn()"><div>Login</div></a>
+                  <a class="menu-link" href="/signup" v-if="!isLoggedIn()"><div>Signup</div></a>
                 </li>
                 <li class="menu-item mega-menu">
                   <a class="menu-link" href="/logout" v-if="isLoggedIn()"><div>Logout</div></a>
