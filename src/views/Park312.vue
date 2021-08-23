@@ -124,7 +124,7 @@
                     </div>
                   </form>
                   <div>
-                    <button @click="searchFilter">Search</button>
+                    <button class="btn btn-primary mt-3" @click="searchFilter">Search</button>
                   </div>
                   <br />
                 </div>

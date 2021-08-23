@@ -48,7 +48,12 @@
                 <p>{{ park_event.attending }}</p>
                 <router-link v-bind:to="`/park_events/${park_event.id}/edit`">Edit Park Event</router-link>
                 |
-                <button v-on:click="destroyParkEvent(park_event)">Delete Park Event</button>
+                <button
+                  v-on:click="destroyParkEvent(park_event)"
+                  class="button button-3d button-large button-rounded button-red"
+                >
+                  Delete Park Event
+                </button>
                 |
                 <router-link to="/park_events">Back to All Park Events</router-link>
                 <hr />

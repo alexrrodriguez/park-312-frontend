@@ -9,20 +9,20 @@
     >
       <div class="container clearfix new-event-title">
         <h1>Add A Park Event To Your Schedule!</h1>
-        <br />
-        <br />
-        <span>Weekly Weather Forecast:</span>
-        <br />
-        <!-- weather widget start -->
-        <a target="_blank" href="https://www.booked.net/weather/chicago-18041">
-          <img
-            src="https://w.bookcdn.com/weather/picture/3_18041_0_1_137AE9_430_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=14981"
-            alt="booked.net"
-          />
-        </a>
-        <!-- weather widget end -->
       </div>
     </section>
+    <br />
+    <div class="weather-widget">
+      <br />
+      <!-- weather widget start -->
+      <a target="_blank" href="https://www.booked.net/weather/chicago-18041">
+        <img
+          src="https://w.bookcdn.com/weather/picture/3_18041_0_1_137AE9_430_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=14981"
+          alt="booked.net"
+        />
+      </a>
+      <!-- weather widget end -->
+    </div>
     <section id="content">
       <div class="content-wrap">
         <div class="container clearfix">
@@ -64,9 +64,11 @@
                       <input class="form-control" type="text" v-model="newParkEventParams.attending" />
                     </li>
                     <br />
-                    <li>
-                      <input type="submit" value="Create" />
-                    </li>
+                    <!-- <a type="submit" value="Create" class="button button-3d button-large button-rounded button-aqua">
+                      Create
+                    </a> -->
+
+                    <input type="submit" value="Create" class="btn btn-primary mt-3" />
                   </ul>
                 </div>
               </form>
@@ -200,7 +202,7 @@
                     </div>
                   </form>
                   <div>
-                    <button @click="searchFilter">Search</button>
+                    <button class="btn btn-primary mt-3" @click="searchFilter">Search</button>
                   </div>
                   <br />
                 </div>
@@ -301,6 +303,9 @@
   margin: 0 auto;
 }
 .create-park-head {
+  text-align: center;
+}
+.weather-widget {
   text-align: center;
 }
 </style>
