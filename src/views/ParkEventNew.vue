@@ -23,6 +23,8 @@
       </a>
       <!-- weather widget end -->
     </div>
+    <br />
+    <hr />
     <section id="content">
       <div class="content-wrap">
         <div class="container clearfix">
@@ -34,33 +36,33 @@
                   <ul>
                     <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
                   </ul>
-                  <ul>
+                  <ul class="create-park-form">
                     <li>
-                      Park Name:
+                      <label for="exampleFormControlSelect1">Park Name:</label>
                       <input class="form-control" type="text" v-model="newParkEventParams.name" />
                     </li>
                     <li>
-                      Park ID:
+                      <label for="exampleFormControlSelect1">Park ID:</label>
                       <input class="form-control" type="text" v-model="newParkEventParams.park_id" />
                     </li>
                     <li>
-                      Event Name:
+                      <label for="exampleFormControlSelect1">Event Name:</label>
                       <input class="form-control" type="text" v-model="newParkEventParams.event_name" />
                     </li>
                     <li>
-                      Facility:
+                      <label for="exampleFormControlSelect1">Facility:</label>
                       <input class="form-control" type="text" v-model="newParkEventParams.facility" />
                     </li>
                     <li>
-                      Date:
+                      <label for="exampleFormControlSelect1">Date:</label>
                       <input class="form-control" type="text" v-model="newParkEventParams.date" />
                     </li>
                     <li>
-                      Time:
+                      <label for="exampleFormControlSelect1">Time:</label>
                       <input class="form-control" type="text" v-model="newParkEventParams.time" />
                     </li>
                     <li>
-                      Attending:
+                      <label for="exampleFormControlSelect1">Attending:</label>
                       <input class="form-control" type="text" v-model="newParkEventParams.attending" />
                     </li>
                     <br />
@@ -202,8 +204,9 @@
                     </div>
                   </form>
                   <div>
-                    <button class="btn btn-primary mt-3" @click="searchFilter">Search</button>
+                    <button class="btn btn-primary mt-3 create-button" @click="searchFilter">Search</button>
                   </div>
+                  <br />
                   <br />
                 </div>
               </div>
@@ -227,7 +230,7 @@
                   <th>Hours</th>
                   <th>Indoor</th>
                   <th>Outdoor</th>
-                  <th>More Info</th>
+                  <th>Info</th>
                 </tr>
               </thead>
 
@@ -241,7 +244,7 @@
                   <td>{{ park.hours }}</td>
                   <td>{{ park.indoor }}</td>
                   <td>{{ park.outdoor }}</td>
-                  <td><router-link v-bind:to="`/parks/${park.id}`">Info</router-link></td>
+                  <td><router-link v-bind:to="`/parks/${park.id}`">More Info</router-link></td>
                 </tr>
               </tbody>
             </table>
@@ -293,6 +296,9 @@
   </div>
 </template>
 <style>
+.create-park-form {
+  list-style-type: none;
+}
 .new-event-title {
   text-align: center;
 }
@@ -301,6 +307,7 @@
 }
 .create-park-event {
   margin: 0 auto;
+  text-align: center;
 }
 .create-park-head {
   text-align: center;

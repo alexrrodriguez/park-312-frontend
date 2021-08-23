@@ -16,7 +16,6 @@
                     <router-link v-bind:to="`/login`">Login</router-link>
                     to create a park event!
                   </span>
-                  <span></span>
                 </div>
                 <form class="row" style="max-width: 300px" v-on:submit.prevent="submit()">
                   <div class="col-12 form-group">
