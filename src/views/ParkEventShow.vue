@@ -46,11 +46,16 @@
               <div class="entry-content">
                 <h4>ATTENDING:</h4>
                 <p>{{ park_event.attending }}</p>
-                <router-link v-bind:to="`/park_events/${park_event.id}/edit`">Update Park Event</router-link>
+                <router-link
+                  class="btn btn-primary mt-3 create-button"
+                  v-bind:to="`/park_events/${park_event.id}/edit`"
+                >
+                  Update Park Event
+                </router-link>
                 |
                 <button
                   v-on:click="destroyParkEvent(park_event)"
-                  class="button button-3d button-large button-rounded button-red"
+                  class="button button-3d button-small button-rounded button-red"
                 >
                   Delete Park Event
                 </button>
