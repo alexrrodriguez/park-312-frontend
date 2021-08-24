@@ -51,7 +51,7 @@
                     </ul>
                   </div>
                 </div>
-                <a href="/" class="btn btn-success w-100 btn-lg">Back To All Parks</a>
+                <a href="/" class="btn btn-success w-100 btn-lg">Back To Home</a>
               </div>
 
               <div class="w-100"></div>

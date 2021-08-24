@@ -258,7 +258,7 @@
         <br />
         <br />
         <br />
-        <h1>Chicago Interactive Park Map</h1>
+        <h1>Chicago Park Facility Map</h1>
         <br />
         <p>Click The Blue Arrow To Search By Address</p>
         <br />
