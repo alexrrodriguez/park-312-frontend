@@ -121,6 +121,8 @@
                   A Website Built To Help User's
                   <strong>Search</strong>
                   For Park Facilities And
+                  <strong>Find</strong>
+                  And
                   <strong>Create</strong>
                   Park Events In The Wonderful City of Chicago.
                 </p>
