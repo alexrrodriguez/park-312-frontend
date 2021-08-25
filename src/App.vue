@@ -150,6 +150,8 @@
 
             <div class="col-md-6 col-lg-4">
               <div class="widget clearfix">
+                <br />
+                <br />
                 <h4>Client Testimonials</h4>
 
                 <div

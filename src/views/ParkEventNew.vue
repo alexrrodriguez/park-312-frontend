@@ -17,7 +17,7 @@
       <!-- weather widget start -->
       <a target="_blank" href="https://www.booked.net/weather/chicago-18041">
         <img
-          src="https://w.bookcdn.com/weather/picture/3_18041_0_1_137AE9_430_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=14981"
+          src="https://w.bookcdn.com/weather/picture/3_18041_0_1_137AE9_390_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=64959"
           alt="booked.net"
         />
       </a>
