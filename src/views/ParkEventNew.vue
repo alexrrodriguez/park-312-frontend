@@ -197,10 +197,10 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">Indoor/Outdoor:</label>
-                      <select class="form-select" id="exampleFormControlSelect1">
+                      <select class="form-select" id="exampleFormControlSelect1" v-model="selectedIn">
                         <option value="">--Select Indoor/Outdoor--</option>
                         <option value="YES">INDOOR</option>
-                        <option value="YES">OUTDOOR</option>
+                        <option value="NO">OUTDOOR</option>
                       </select>
                     </div>
                   </form>
@@ -334,7 +334,7 @@ export default {
       search: "",
       selectedDistrict: "",
       selectedFacility: "",
-      selectedInOut: "",
+      selectedIn: "",
       searchResult: [],
     };
   },
@@ -363,7 +363,8 @@ export default {
     },
     searchFilter: function () {
       let filterDistrict = this.selectedDistrict,
-        filterFacility = this.selectedFacility;
+        filterFacility = this.selectedFacility,
+        filterIn = this.selectedIn;
       this.searchResult = this.parks.filter(function (park) {
         let filtered = true;
         if (filterDistrict && filterDistrict.length > 0) {
@@ -372,6 +373,11 @@ export default {
         if (filtered) {
           if (filterFacility && filterFacility.length > 0) {
             filtered = park.facility == filterFacility;
+          }
+        }
+        if (filtered) {
+          if (filterIn && filterIn.length > 0) {
+            filtered = park.indoor == filterIn;
           }
         }
         return filtered;
