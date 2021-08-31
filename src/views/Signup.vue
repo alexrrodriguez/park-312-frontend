@@ -19,7 +19,7 @@
                 </div>
                 <form class="row" style="max-width: 300px" v-on:submit.prevent="submit()">
                   <div class="col-12 form-group">
-                    <label for="" class="text-capitalize fw-semibold">Name</label>
+                    <label for="" class="text-capitalize fw-semibold">Username</label>
                     <input
                       type="text"
                       id="template-op-form-email"
