@@ -15,8 +15,8 @@
       data-top-bottom="background-position:0px -500px;"
     >
       <div class="container clearfix">
-        <h1>About Us</h1>
-        <span>Everything you need to know about our Company</span>
+        <h1>About Park 312</h1>
+        <span>Everything you need to know about us</span>
       </div>
     </section>
     <!-- #page-title end -->
