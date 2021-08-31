@@ -50,7 +50,7 @@
                       <input class="form-control" type="text" v-model="newParkEventParams.event_name" />
                     </li>
                     <li>
-                      <label for="exampleFormControlSelect1">Facility:</label>
+                      <label for="exampleFormControlSelect1">Facility Name:</label>
                       <input class="form-control" type="text" v-model="newParkEventParams.facility" />
                     </li>
                     <li>
