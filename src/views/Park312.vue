@@ -39,6 +39,7 @@
     <section id="page-title" class="page-title-center">
       <div class="container clearfix">
         <br />
+        <hr />
         <h5>
           <span>Search For Parks And Find Park Events In Chicago</span>
         </h5>
@@ -48,8 +49,6 @@
             <router-link v-bind:to="`/signup`">Signup</router-link>
             To Create Your Own Park Events!
           </span>
-          <br />
-          <br />
         </h5>
         <hr />
         <br />
@@ -100,6 +99,7 @@
                         <option value="FITNESS CENTER">FITNESS CENTER</option>
                         <option value="FOOTBALL">FOOTBALL</option>
                         <option value="GYMNASIUM">GYMNASIUM</option>
+                        <option value="GYMNASIUM">GYMNASTIC</option>
                         <option value="HANDBALL">HANDBALL</option>
                         <option value="HORSESHOE">HORSESHOE</option>
                         <option value="ICESKATING">ICESKATING</option>
@@ -235,7 +235,7 @@
         <br />
         <h1>Chicago Park Facility Map</h1>
         <br />
-        <p>Click The Blue Arrow To Search By Address</p>
+        <p><i>Click The Blue Arrow To Search By Address</i></p>
         <br />
         <div class="info">
           <div class="element">
@@ -303,7 +303,7 @@
 }
 .map {
   width: auto;
-  height: 500px;
+  height: 350px;
 }
 table {
   overflow-y: scroll;
