@@ -180,6 +180,7 @@
                         <option value="FITNESS CENTER">FITNESS CENTER</option>
                         <option value="FOOTBALL">FOOTBALL</option>
                         <option value="GYMNASIUM">GYMNASIUM</option>
+                        <option value="GYMNASTIC">GYMNASTIC</option>
                         <option value="HANDBALL">HANDBALL</option>
                         <option value="HORSESHOE">HORSESHOE</option>
                         <option value="ICESKATING">ICESKATING</option>
