@@ -37,9 +37,10 @@
               </div>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quidem minus id omnis, nam expedita, ea
-                fuga commodi voluptas iusto, hic autem deleniti dolores explicabo labore enim repellat earum
-                perspiciatis.
+                Park 312 has over 500 different parks to search for and thousands of different park facilities. Users
+                can choose from one of nine different Chicago districts or use the Chicago Park Facility Map in order to
+                filter their search by location. Users can click on the "more info" link to see upcoming scheduled
+                events at thier parks or signup to create and schedule their own park events!
               </p>
             </div>
 
@@ -53,9 +54,10 @@
               </div>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quidem minus id omnis, nam expedita, ea
-                fuga commodi voluptas iusto, hic autem deleniti dolores explicabo labore enim repellat earum
-                perspiciatis.
+                Our mission is to make searching for park facilities in the city of Chicago easier for tourists or
+                locals. We aim to help people find and create park events to enjoy with friends, family, or just to meet
+                up with new people. We hope that Park 312 can help finding park facilities and scheduling park events in
+                Chicago as easy as a few clicks.
               </p>
             </div>
 
@@ -69,9 +71,10 @@
               </div>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quidem minus id omnis, nam expedita, ea
-                fuga commodi voluptas iusto, hic autem deleniti dolores explicabo labore enim repellat earum
-                perspiciatis.
+                We've spent many hours curating a database of park facilities that allow users to search by district,
+                facility type, and wether those facilities are indoor or outdoor. We store up to date information on all
+                the different park facilities in the City of Chicago. We also store information on user scheduled park
+                events so people can see what events are planned at their favorite park facilities.
               </p>
             </div>
           </div>
