@@ -97,6 +97,7 @@ export default {
   data: function () {
     return {
       park_events: [],
+      users: [],
       name: "",
       email: "",
       image: "",
@@ -104,15 +105,22 @@ export default {
   },
   created: function () {
     this.indexParkEvents();
+    this.indexUsers();
   },
   methods: {
     indexParkEvents: function () {
       axios.get("/park_events").then((response) => {
         console.log("park events index", response);
         this.park_events = response.data;
-        this.name = response.data[0]["user"]["name"];
-        this.email = response.data[0]["user"]["email"];
-        this.image = response.data[0]["user"]["image"];
+      });
+    },
+    indexUsers: function () {
+      axios.get("/users").then((response) => {
+        console.log("users index", response);
+        this.users = response.data;
+        this.name = response.data.name;
+        this.email = response.data.email;
+        this.image = response.data.image;
       });
     },
   },
