@@ -129,9 +129,10 @@
                   </div>
                   <br />
                   <div>
-                    <span><i>Select from the dropdown menu and click Search to populate table</i></span>
+                    <p>
+                      <span>Select from the dropdown menu and click Search to populate table</span>
+                    </p>
                   </div>
-                  <br />
                 </div>
               </div>
             </div>
@@ -242,7 +243,7 @@
         <br />
         <h1>Chicago Park Facility Map</h1>
         <br />
-        <p><i>Click The Blue Arrow To Search By Address</i></p>
+        <p><span>Click The Blue Arrow To Search By Address</span></p>
         <br />
         <div class="info">
           <div class="element">

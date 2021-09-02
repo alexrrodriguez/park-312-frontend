@@ -231,7 +231,11 @@
                     <button class="btn btn-primary mt-3 create-button" @click="searchFilter">Search</button>
                   </div>
                   <br />
-                  <br />
+                  <div>
+                    <p>
+                      <span>Select from the dropdown menu and click Search to populate table</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -284,7 +288,9 @@
         <br />
         <h1>Chicago Park Facility Map</h1>
         <br />
-        <p>Click The Blue Arrow To Search By Address</p>
+        <p>
+          <span>Click The Blue Arrow To Search By Address</span>
+        </p>
         <br />
         <div class="info">
           <div class="element">
