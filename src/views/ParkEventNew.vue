@@ -55,11 +55,31 @@
                     </li>
                     <li>
                       <label for="exampleFormControlSelect1">Date:</label>
-                      <input class="form-control" type="text" v-model="newParkEventParams.date" />
+                      <div class="input-group">
+                        <input
+                          class="form-control text-start component-datepicker past-enabled"
+                          type="text"
+                          placeholder="MM/DD/YYYY"
+                          v-model="newParkEventParams.date"
+                        />
+                        <div class="input-group-text"><i class="icon-calendar2"></i></div>
+                      </div>
                     </li>
                     <li>
                       <label for="exampleFormControlSelect1">Time:</label>
-                      <input class="form-control" type="text" v-model="newParkEventParams.time" />
+                      <div class="form-group">
+                        <div class="input-group text-start" data-target-input="nearest" data-target=".datetimepicker1">
+                          <input
+                            class="form-control datetimepicker-input datetimepicker1"
+                            placeholder="00:00 AM/PM"
+                            type="text"
+                            v-model="newParkEventParams.time"
+                          />
+                          <div class="input-group-text" data-target=".datetimepicker1" data-toggle="datetimepicker">
+                            <i class="icon-clock"></i>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li>
                       <label for="exampleFormControlSelect1">Attending:</label>
