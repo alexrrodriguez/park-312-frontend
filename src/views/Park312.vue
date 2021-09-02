@@ -64,6 +64,7 @@
           </a>
         </div>
         <br />
+        <br />
         <section id="page-title" class="page-title-center">
           <div>
             <div class="container clearfix">
@@ -127,6 +128,9 @@
                     <button class="btn btn-primary mt-3 create-button" @click="searchFilter">Search</button>
                   </div>
                   <br />
+                  <div>
+                    <span><i>Select from the dropdown menu and click Search to populate table</i></span>
+                  </div>
                   <br />
                 </div>
               </div>
@@ -135,12 +139,13 @@
         </section>
       </div>
     </section>
+
     <section id="content">
       <div>
         <div class="container clearfix">
           <div class="table-responsive">
-            <table id="datatable1" class="table table-striped table-bordered" cellspacing="0" width="100%">
-              <thead>
+            <table id="datatable1" class="table table1 table-striped table-bordered" cellspacing="0" width="100%">
+              <thead class="head">
                 <tr>
                   <th>Park Name</th>
                   <th>District</th>
@@ -153,7 +158,6 @@
                   <th>Info</th>
                 </tr>
               </thead>
-
               <tbody>
                 <tr v-for="park in searchResult" :key="park.id">
                   <td>{{ park.name }}</td>
@@ -221,6 +225,9 @@
                   <td>{{ park.outdoor }}</td>
                   <td><router-link v-bind:to="`/parks/${park.id}`">More Info</router-link></td>
                 </tr>
+                <div class="atomSpinner" v-if="loading">
+                  <atom-spinner :animation-duration="1000" :size="60" :color="'#1ABC9C'" />
+                </div>
               </tbody>
             </table>
           </div>
@@ -273,6 +280,11 @@
 </template>
 
 <style>
+.spinner {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
 .create-button {
   margin: 0 !important;
 }
@@ -304,6 +316,7 @@
 .map {
   width: auto;
   height: 350px;
+  border: 4px solid black;
 }
 table {
   overflow-y: scroll;
@@ -318,7 +331,8 @@ tr:nth-child(even) {
 th {
   background: white;
   /* position: sticky;
-  top: 0;  */
+  top: 0;
+  margin: auto; */
 }
 /* .info {
   display: flex;
@@ -328,11 +342,15 @@ th {
 <script>
 import Vue from "vue";
 import Vue2Filters from "vue2-filters";
+import { AtomSpinner } from "epic-spinners";
 
 Vue.use(Vue2Filters);
 
 import axios from "axios";
 export default {
+  components: {
+    AtomSpinner,
+  },
   data: function () {
     return {
       parks: [],
@@ -341,6 +359,7 @@ export default {
       selectedFacility: "",
       selectedIn: "",
       searchResult: [],
+      loading: false,
     };
   },
   mixins: [Vue2Filters.mixin],
@@ -349,10 +368,14 @@ export default {
   },
   methods: {
     indexParks: function () {
-      axios.get("/parks").then((response) => {
-        console.log("parks index", response);
-        this.parks = response.data;
-      });
+      this.loading = true;
+      axios
+        .get("/parks")
+        .then((response) => {
+          console.log("parks index", response);
+          this.parks = response.data;
+        })
+        .finally(() => (this.loading = false));
     },
     searchFilter: function () {
       let filterDistrict = this.selectedDistrict,

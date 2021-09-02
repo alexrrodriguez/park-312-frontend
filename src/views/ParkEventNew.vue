@@ -140,6 +140,9 @@
                   <td>{{ park.hours }}</td>
                   <td><router-link v-bind:to="`/parks/${park.id}`">More Info</router-link></td>
                 </tr>
+                <div v-if="loading">
+                  <atom-spinner :animation-duration="1000" :size="60" :color="'#1ABC9C'" />
+                </div>
               </tbody>
             </table>
           </div>
@@ -342,10 +345,14 @@
 import axios from "axios";
 import Vue from "vue";
 import Vue2Filters from "vue2-filters";
+import { AtomSpinner } from "epic-spinners";
 
 Vue.use(Vue2Filters);
 
 export default {
+  components: {
+    AtomSpinner,
+  },
   data: function () {
     return {
       newParkEventParams: {},
@@ -356,6 +363,7 @@ export default {
       selectedFacility: "",
       selectedIn: "",
       searchResult: [],
+      loading: false,
     };
   },
   mixins: [Vue2Filters.mixin],
@@ -376,10 +384,14 @@ export default {
         });
     },
     indexParks: function () {
-      axios.get("/parks").then((response) => {
-        console.log("parks index", response);
-        this.parks = response.data;
-      });
+      this.loading = true;
+      axios
+        .get("/parks")
+        .then((response) => {
+          console.log("parks index", response);
+          this.parks = response.data;
+        })
+        .finally(() => (this.loading = false));
     },
     searchFilter: function () {
       let filterDistrict = this.selectedDistrict,
