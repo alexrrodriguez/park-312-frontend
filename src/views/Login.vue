@@ -41,6 +41,7 @@
                           id="login-form-username"
                           name="login-form-username"
                           value=""
+                          placeholder="Login as Tom with: tom@example.com"
                           class="form-control not-dark"
                           v-model="newSessionParams.email"
                         />
@@ -52,6 +53,7 @@
                           type="password"
                           id="login-form-password"
                           name="login-form-password"
+                          placeholder="Tom's Password: password"
                           value=""
                           class="form-control not-dark"
                           v-model="newSessionParams.password"
