@@ -34,7 +34,7 @@
                     <h3>Login to your Account</h3>
 
                     <ul>
-                      <li style="color: Red" v-for="error in errors" :key="error">{{ error }}</li>
+                      <li class="text-danger" v-for="error in errors" :key="error">{{ error }}</li>
                     </ul>
 
                     <div class="row">
