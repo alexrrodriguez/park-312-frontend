@@ -68,22 +68,6 @@
         </div>
       </div>
     </section>
-    <!-- <h1>PARK:</h1>
-    <h3>{{ park_event.name }}</h3>
-    <h3>Park ID: {{ park_event.park_id }}</h3>
-    <h2>EVENT NAME:</h2>
-    <h3>{{ park_event.event_name }}</h3>
-    <h2>FACILITY:</h2>
-    <h3>{{ park_event.facility }}</h3>
-    <h2>Date/Time:</h2>
-    <p>{{ park_event.date }}</p>
-    <p>{{ park_event.time }}</p>
-    <p>Attending: {{ park_event.attending }}</p>
-    <router-link v-bind:to="`/park_events/${park_event.id}/edit`">Edit Park Event</router-link>
-    |
-    <button v-on:click="destroyParkEvent(park_event)">Delete Park Event</button>
-    |
-    <router-link to="/park_events">Back to All Park Events</router-link> -->
   </div>
 </template>
 
