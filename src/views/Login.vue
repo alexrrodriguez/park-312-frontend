@@ -33,6 +33,10 @@
                   >
                     <h3>Login to your Account</h3>
 
+                    <ul>
+                      <li style="color: Red" v-for="error in errors" :key="error">{{ error }}</li>
+                    </ul>
+
                     <div class="row">
                       <div class="col-12 form-group">
                         <label for="login-form-username">Email:</label>
