@@ -9,14 +9,8 @@
             <!-- Logo
 						============================================= -->
             <div id="logo">
-              <a href="/" class="standard-logo" data-dark-logo="images/logo-dark.png">
-                Park 312
-                <!-- <img src="images/logo.png" alt="Canvas Logo" /> -->
-              </a>
-              <a href="/" class="retina-logo" data-dark-logo="images/logo-dark@2x.png">
-                Park 312
-                <!-- <img src="images/logo@2x.png" alt="Canvas Logo" /> -->
-              </a>
+              <a href="/" class="standard-logo" data-dark-logo="images/logo-dark.png">Park 312</a>
+              <a href="/" class="retina-logo" data-dark-logo="images/logo-dark@2x.png">Park 312</a>
             </div>
             <!-- #logo end -->
 
@@ -88,21 +82,6 @@
       <div class="header-wrap-clone"></div>
     </header>
     <!-- #header end -->
-    <!-- <div id="nav">
-      <router-link to="/">Park312</router-link>
-      |
-      <router-link to="/park_event/new" v-if="isLoggedIn()">Create Park Event</router-link>
-      |
-      <router-link to="/park_events" v-if="isLoggedIn()">Profile Page</router-link>
-      |
-      <router-link to="/about">About</router-link>
-      |
-      <router-link to="/signup" v-if="!isLoggedIn()">Signup</router-link>
-      |
-      <router-link to="/login" v-if="!isLoggedIn()">Login</router-link>
-      |
-      <router-link to="/logout" v-if="isLoggedIn()">Logout</router-link>
-    </div> -->
     <router-view />
     <!-- Footer
 		============================================= -->
@@ -115,7 +94,6 @@
             <div class="col-md-6 col-lg-4">
               <div class="widget clearfix">
                 <h1>Park 312</h1>
-                <!-- <img src="images/footer-widget-logo.png" alt="Image" class="footer-logo" /> -->
 
                 <p>
                   A Website Built To Help User's

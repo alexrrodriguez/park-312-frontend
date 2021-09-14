@@ -17,6 +17,31 @@
                 <h3>{{ name }}</h3>
                 <span>Email: {{ email }}</span>
               </div>
+              <button class="btn btn-primary mt-3" v-on:click="showProfile(users)">Update Profile</button>
+              <dialog type="button" id="profile-details">
+                <div class="modal-container">
+                  <form method="dialog">
+                    <form v-on:submit.prevent="updateUser(currentUser)">
+                      <h1>{{ name }}</h1>
+                      <h5>Update Name:</h5>
+                      <input type="text" v-model="currentUser.name" />
+                      <br />
+                      <br />
+                      <h5>Update Email:</h5>
+                      <input type="text" v-model="currentUser.email" />
+                      <br />
+                      <br />
+                      <h5>Update IMG URL:</h5>
+                      <input type="text" v-model="currentUser.image" />
+                      <br />
+                      <button class="btn btn-primary mt-3" type="submit" value="Update">Update</button>
+                    </form>
+                    <button class="button button-3d button-small button-rounded button-red" v-on:click="closeUpdate()">
+                      Close
+                    </button>
+                  </form>
+                </div>
+              </dialog>
             </div>
           </div>
         </div>
@@ -81,7 +106,10 @@
     </section>
   </div>
 </template>
-<style scoped>
+<style>
+.modal-container {
+  text-align: center;
+}
 .park-event:hover {
   background: #1abc9c;
 }
@@ -101,6 +129,8 @@ export default {
       name: "",
       email: "",
       image: "",
+      editUserParams: {},
+      currentUser: {},
     };
   },
   created: function () {
@@ -122,6 +152,29 @@ export default {
         this.email = response.data.email;
         this.image = response.data.image;
       });
+    },
+    showProfile: function (users) {
+      this.currentUser = users;
+      console.log(this.currentUser);
+      document.querySelector("#profile-details").showModal();
+    },
+    updateUser: function (currentUser) {
+      var editUserParams = currentUser;
+      axios
+        .patch("/users/" + currentUser.id, editUserParams)
+        .then((response) => {
+          console.log("update user", response);
+          window.location.reload();
+          this.$router.push("/park_events");
+          document.querySelector("#profile-details").closeModal();
+        })
+        .catch((error) => {
+          console.log("user update error", error.response);
+          this.errors = error.response.data.errors;
+        });
+    },
+    closeUpdate: function () {
+      document.querySelector("#profile-details").closeModal();
     },
   },
 };
