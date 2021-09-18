@@ -2,10 +2,10 @@
   <div class="park-events-index">
     <br />
     <section id="content">
-      <div class="content-wrap">
+      <div class="content-wrap profile-wrap">
         <div class="container clearfix">
           <div class="row col-mb-50">
-            <div class="col-12">
+            <div class="col-12 profile-header">
               <img
                 v-bind:src="image"
                 v-bind:alt="name"
@@ -21,7 +21,7 @@
                 v-on:click="showProfile(users)"
                 href="#myModal1"
                 data-lightbox="inline"
-                class="btn btn-primary mt-3"
+                class="btn btn-primary mt-3 update-button"
               >
                 Update Profile
               </button>
@@ -161,6 +161,12 @@
   </div>
 </template>
 <style>
+.profile-wrap {
+  padding-bottom: 0px !important;
+}
+.update-button {
+  margin-bottom: 4px;
+}
 .modal-container {
   text-align: center;
 }
