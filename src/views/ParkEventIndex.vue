@@ -17,8 +17,62 @@
                 <h3>{{ name }}</h3>
                 <span>Email: {{ email }}</span>
               </div>
-              <button class="btn btn-primary mt-3" v-on:click="showProfile(users)">Update Profile</button>
-              <dialog type="button" id="profile-details">
+              <button
+                v-on:click="showProfile(users)"
+                href="#myModal1"
+                data-lightbox="inline"
+                class="btn btn-primary mt-3"
+              >
+                Update Profile
+              </button>
+              <!-- Content
+		============================================= -->
+              <section id="content">
+                <div class="content-wrap">
+                  <div class="container clearfix">
+                    <!-- <div class="center">
+                      <a href="#myModal1" data-lightbox="inline" class="button button-large button-rounded">
+                        Trigger Modal
+                      </a>
+                    </div> -->
+
+                    <!-- <div class="modal-on-load" data-target="#myModal1"></div> -->
+
+                    <!-- Modal -->
+                    <div class="modal1 mfp-hide" id="myModal1">
+                      <div class="block mx-auto" style="background-color: #fff; max-width: 500px">
+                        <div class="center" style="padding: 50px">
+                          <form v-on:submit.prevent="updateUser(currentUser)">
+                            <h1>{{ name }}</h1>
+                            <h5>Update Name:</h5>
+                            <input type="text" v-model="currentUser.name" />
+                            <br />
+                            <br />
+                            <h5>Update Email:</h5>
+                            <input type="text" v-model="currentUser.email" />
+                            <br />
+                            <br />
+                            <h5>Update IMG URL:</h5>
+                            <input type="text" v-model="currentUser.image" />
+                            <br />
+                            <br />
+                            <div>
+                              <button class="btn btn-primary mt-3" type="submit" value="Update">Update</button>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="section center m-0" style="padding: 30px">
+                          <a href="/park_events" class="button" onClick="$.magnificPopup.close();return false;">
+                            Close this Modal
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- #content end -->
+              <!-- <dialog type="button" id="profile-details">
                 <div class="modal-container">
                   <form method="dialog">
                     <form v-on:submit.prevent="updateUser(currentUser)">
@@ -41,7 +95,7 @@
                     </button>
                   </form>
                 </div>
-              </dialog>
+              </dialog> -->
             </div>
           </div>
         </div>
@@ -156,7 +210,7 @@ export default {
     showProfile: function (users) {
       this.currentUser = users;
       console.log(this.currentUser);
-      document.querySelector("#profile-details").showModal();
+      // document.querySelector("#profile-details").showModal();
     },
     updateUser: function (currentUser) {
       var editUserParams = currentUser;
