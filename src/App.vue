@@ -144,10 +144,7 @@
                           <a href="#"><img src="images/testimonials/3.jpg" alt="Customer Testimonails" /></a>
                         </div>
                         <div class="testi-content">
-                          <p>
-                            Similique fugit repellendus expedita excepturi iure perferendis provident quia eaque.
-                            Repellendus, vero numquam?
-                          </p>
+                          <p>Park 312 is the best app to schedule my basketball pickup games around the city!</p>
                           <div class="testi-meta">
                             Steve Jobs
                             <span>Apple Inc.</span>
@@ -160,12 +157,11 @@
                         </div>
                         <div class="testi-content">
                           <p>
-                            Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id
-                            culpa corporis molestias.
+                            Everytime I travel to Chicago I always use Park 312 to schedule park events for my company.
                           </p>
                           <div class="testi-meta">
-                            Collis Ta'eed
-                            <span>Envato Inc.</span>
+                            Bill Gates
+                            <span>Microsoft</span>
                           </div>
                         </div>
                       </div>
@@ -174,13 +170,10 @@
                           <a href="#"><img src="images/testimonials/1.jpg" alt="Customer Testimonails" /></a>
                         </div>
                         <div class="testi-content">
-                          <p>
-                            Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero
-                            illo rerum!
-                          </p>
+                          <p>I love using Park 312 to find a nice park facility when I am in Chicago!</p>
                           <div class="testi-meta">
-                            John Doe
-                            <span>XYZ Inc.</span>
+                            Elon Musk
+                            <span>Tesla</span>
                           </div>
                         </div>
                       </div>
