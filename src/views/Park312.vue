@@ -203,7 +203,7 @@
         <h1>Search by Park Name:</h1>
         <br />
         Search:
-        <input class="home_id" type="text" v-model="search" placeholder="park name.." />
+        <input class="home_id" type="text" v-model="search" placeholder="try 'Bell' basketball facility.." />
         <br />
         <br />
         <br />

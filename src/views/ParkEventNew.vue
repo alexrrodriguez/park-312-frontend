@@ -107,7 +107,7 @@
         <h1>Search by Park Name:</h1>
         <br />
         Search:
-        <input class="park_event_search" type="text" v-model="search" placeholder="search park name.." />
+        <input class="park_event_search" type="text" v-model="search" placeholder="try 'Bell' basketball facility.." />
         <br />
         <br />
         <br />
