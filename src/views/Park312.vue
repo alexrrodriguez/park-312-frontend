@@ -58,6 +58,8 @@
         <br />
         <strong>District Map -</strong>
         <i>(Click for Full Image)</i>
+        <br />
+        <br />
         <div>
           <a href="https://wikitravel.org/upload/shared//b/b3/Chicago_neighborhoods_map.png" target="_blank">
             <img class="map element" src="../assets/Chicago_neighborhoods_map.png" alt="" />
@@ -331,7 +333,12 @@
 .map {
   width: auto;
   height: 350px;
-  border: 4px solid black;
+  box-shadow: 3px 3px 3px black;
+}
+.map:hover {
+  -moz-box-shadow: 0 0 10px black;
+  -webkit-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
 }
 table {
   overflow-y: scroll;

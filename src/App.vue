@@ -146,8 +146,8 @@
                         <div class="testi-content">
                           <p>Park 312 is the best app to schedule my basketball pickup games around the city!</p>
                           <div class="testi-meta">
-                            Steve Jobs
-                            <span>Apple Inc.</span>
+                            Steve Anderson
+                            <span>Naperville, Il</span>
                           </div>
                         </div>
                       </div>
@@ -160,8 +160,8 @@
                             Everytime I travel to Chicago I always use Park 312 to schedule park events for my company.
                           </p>
                           <div class="testi-meta">
-                            Bill Gates
-                            <span>Microsoft</span>
+                            Kevin Johnson
+                            <span>Denver, Colorado</span>
                           </div>
                         </div>
                       </div>
@@ -172,8 +172,8 @@
                         <div class="testi-content">
                           <p>I love using Park 312 to find a nice park facility when I am in Chicago!</p>
                           <div class="testi-meta">
-                            Elon Musk
-                            <span>Tesla</span>
+                            Sakura Yamada
+                            <span>Tokyo, Japan</span>
                           </div>
                         </div>
                       </div>
