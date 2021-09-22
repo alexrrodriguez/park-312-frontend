@@ -125,7 +125,15 @@
                     </div>
                   </form>
                   <div>
-                    <button class="btn btn-primary mt-3 create-button" @click="searchFilter">Search</button>
+                    <button
+                      class="btn btn-primary mt-3 create-button"
+                      @click="
+                        searchFilter();
+                        activeTable();
+                      "
+                    >
+                      Search
+                    </button>
                   </div>
                   <br />
                   <div>
@@ -145,7 +153,13 @@
       <div>
         <div class="container clearfix">
           <div class="table-responsive">
-            <table id="datatable1" class="table table1 table-striped table-bordered" cellspacing="0" width="100%">
+            <table
+              v-if="showTable"
+              id="datatable1"
+              class="table table1 table-striped table-bordered"
+              cellspacing="0"
+              width="100%"
+            >
               <thead class="head">
                 <tr>
                   <th>Park Name</th>
@@ -354,6 +368,7 @@ export default {
   },
   data: function () {
     return {
+      showTable: false,
       parks: [],
       search: "",
       selectedDistrict: "",
@@ -377,6 +392,9 @@ export default {
           this.parks = response.data;
         })
         .finally(() => (this.loading = false));
+    },
+    activeTable: function () {
+      this.showTable = true;
     },
     searchFilter: function () {
       let filterDistrict = this.selectedDistrict,

@@ -63,7 +63,7 @@
                         </div>
                         <div class="section center m-0" style="padding: 30px">
                           <a href="/park_events" class="button" onClick="$.magnificPopup.close();return false;">
-                            Close this Modal
+                            Close
                           </a>
                         </div>
                       </div>
@@ -72,30 +72,6 @@
                 </div>
               </section>
               <!-- #content end -->
-              <!-- <dialog type="button" id="profile-details">
-                <div class="modal-container">
-                  <form method="dialog">
-                    <form v-on:submit.prevent="updateUser(currentUser)">
-                      <h1>{{ name }}</h1>
-                      <h5>Update Name:</h5>
-                      <input type="text" v-model="currentUser.name" />
-                      <br />
-                      <br />
-                      <h5>Update Email:</h5>
-                      <input type="text" v-model="currentUser.email" />
-                      <br />
-                      <br />
-                      <h5>Update IMG URL:</h5>
-                      <input type="text" v-model="currentUser.image" />
-                      <br />
-                      <button class="btn btn-primary mt-3" type="submit" value="Update">Update</button>
-                    </form>
-                    <button class="button button-3d button-small button-rounded button-red" v-on:click="closeUpdate()">
-                      Close
-                    </button>
-                  </form>
-                </div>
-              </dialog> -->
             </div>
           </div>
         </div>
