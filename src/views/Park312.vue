@@ -12,27 +12,13 @@
           <div class="container clearfix">
             <br />
             <h1 class="park312-head-title">PARK 312</h1>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
           </div>
         </section>
+        <!-- <br />
         <br />
         <br />
         <br />
-        <br />
-        <br />
+        <br /> -->
       </div>
     </section>
 
@@ -314,6 +300,7 @@
 .home-title {
   text-align: center;
   text-shadow: 2px 2px 2px black;
+  margin-bottom: 16rem;
 }
 .park312-title {
   width: 25%;
@@ -323,6 +310,8 @@
 }
 .park312-head-title {
   margin: 0;
+  padding-bottom: 10rem !important;
+  margin-bottom: 34rem !important;
 }
 .page-title-312 {
   background-color: #444;
