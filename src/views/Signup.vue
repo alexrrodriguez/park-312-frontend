@@ -14,7 +14,7 @@
                   <span style="font-size: 16px" class="fw-light text-capitalize ls1 mt-0">
                     Or
                     <router-link v-bind:to="`/login`">Login</router-link>
-                    to create a park event!
+                    if already registered!
                   </span>
                 </div>
                 <form class="row" style="max-width: 300px" v-on:submit.prevent="submit()">

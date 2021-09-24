@@ -43,11 +43,14 @@
                           id="login-form-username"
                           name="login-form-username"
                           value=""
-                          placeholder="Login as Tom with: tom@example.com"
+                          placeholder="enter email.."
                           class="form-control not-dark"
                           v-model="newSessionParams.email"
                         />
                       </div>
+                      <small>Login as Tom with email: "tom@example.com" and password: "password" to demo app!</small>
+                      <br />
+                      <br />
 
                       <div class="col-12 form-group">
                         <label for="login-form-password">Password:</label>
@@ -55,7 +58,7 @@
                           type="password"
                           id="login-form-password"
                           name="login-form-password"
-                          placeholder="Tom's Password: password"
+                          placeholder="enter password.."
                           value=""
                           class="form-control not-dark"
                           v-model="newSessionParams.password"
