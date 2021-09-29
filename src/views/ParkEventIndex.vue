@@ -17,6 +17,10 @@
                 <h3>{{ name }}</h3>
                 <span>Email: {{ email }}</span>
               </div>
+              <button @click="$router.push('/park_event/new')" class="btn btn-primary mt-3 update-button">
+                Create Park Event
+              </button>
+              <br />
               <button
                 v-on:click="showProfile(users)"
                 href="#myModal1"
@@ -141,7 +145,7 @@
   padding-bottom: 0px !important;
 }
 .update-button {
-  margin-bottom: 4px;
+  margin-bottom: 1rem;
 }
 .modal-container {
   text-align: center;
